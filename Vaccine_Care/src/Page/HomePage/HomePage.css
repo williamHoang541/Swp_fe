@@ -1,0 +1,411 @@
+.HomePage-main-container{
+    width: 1920px;
+    height: 700px;
+    margin: 0 auto;
+    background: rgba(232, 242, 255, 0.2)
+      url(../../assets/HomePage/baby.png) no-repeat
+      center;
+    background-size: cover;
+    overflow: hidden;
+}
+  .flex-column-eb {
+    position: absolute;
+    width: 85.35px;
+    height: 540px;
+    top: 50%;
+    left: 1181.73px;
+    transform: translate(0, -55.56%);
+    z-index: 20;
+  }
+  .background {
+    /* position: relative; */
+    width: 60px;
+    height: 60px;
+    margin: 0 0 0 0;
+    background: #19b8af;
+    z-index: 12;
+    overflow: visible auto;
+    border-radius: 500px;
+  }
+  .svg {
+    position: relative;
+    width: 25px;
+    height: 24px;
+    margin: 18px 0 0 17.5px;
+    z-index: 13;
+    overflow: hidden;
+  }
+
+  .svg-1 {
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    background: url(../../assets/HomePage/search.png)
+      no-repeat center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    overflow: hidden;
+  }
+  .background-2 {
+    /* position: relative; */
+    width: 60px;
+    height: 60px;
+    margin: 420px 0 0 25.35px;
+    background: #fe5858;
+    z-index: 20;
+    overflow: visible auto;
+    border-radius: 500px;
+  }
+  .stethoscope {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 17.5px 0 0 17.5px;
+    z-index: 21;
+    overflow: hidden;
+  }
+
+  .stethoscope-3 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    background: url(../../assets/HomePage/heard.png)
+      no-repeat center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: 23;
+    overflow: hidden;
+  }
+  .flex-column-af {
+    position: absolute;
+    top: 113px;
+    right: 805.02px;
+    bottom: 240.34px;
+    left: 401px;
+    font-size: 0px;
+    z-index: 16;
+  }
+  .HomPage-heading-protected-together {
+    height: 76px;
+    margin: 0 0 0 0;
+    color: #19b8af;
+    font-family: Manrope, var(--default-font-family);
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 76px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 11;
+  }
+  .hotline-24-7 {
+    color: #8e6b88;
+    font-family: Manrope, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    line-height: 21px;
+  }
+
+  .col-12.mt-152 {
+    margin-top: 152px;
+}
+  .welcome-software-management {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 594.06px;
+    height: 88px;
+    top: 156.66px;
+    right: 115.92px;
+    left: 4px;
+    color: #57d8d0;
+    font-family: Manrope, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    z-index: 3;
+    margin-top: 100px;
+  }
+  .background-4 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: -200px;
+    background: #ffb71a;
+    transform: translate(0, 6.12%);
+    z-index: 16;
+    border-radius: 500px;
+  }
+  .svg-5 {
+    position: relative;
+    width: 31px;
+    height: 24px;
+    margin: 18px 0 0 14.5px;
+    z-index: 17;
+    overflow: hidden;
+  }
+  .svg-fill-6 {
+    position: absolute;
+    width: 31px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    z-index: 18;
+    overflow: hidden;
+  }
+  .svg-7 {
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    background: url(../../assets/HomePage/heath.png)
+      no-repeat center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: 19;
+    overflow: hidden;
+  }
+  .HomPage-datlich {
+    width: 238.28px;
+    top: 312.66px;
+    bottom: -18.67px;
+    left: 295.55px;
+    cursor: pointer;
+    background: #19b8af;
+    border: none;
+    z-index: 9;
+    border-radius: 8px;
+  }
+  .HomPage-datlich:hover{
+    background-color: #285e61; 
+  }
+  .lien-he {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 238.28px;
+    top: 16px;
+    bottom: 17.67px;
+    left: 75px;
+    color: #ffffff;
+    font-family: Manrope, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 52.67px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  .HomPage-Hotlinelink {
+    background-color: transparent;
+    height: 52.67px;
+    width: 238.28px;
+    text-align: -webkit-right;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 8px;
+    border: 1px solid #19b8af ;
+}
+  .HomePage-iconPhone {
+    margin-left: 30px;
+    width: 20px;
+    height: 20px;
+}
+  .HomePage-Hotline {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-top: 20px;
+}
+  .phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 151.507px;
+    height: 24px;
+    top: 325.66px;
+    left: calc(50% - 278.63px);
+    color: #19b8af;
+    font-family: Manrope, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 8;
+  }
+
+  /* Danh mục */
+  .HomePage-tilte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+}
+.HomePage-dm{
+  font-size: 30px;
+  font-weight: 700;
+}
+  .latest-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 130px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+  .card.New1 {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid aliceblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .card-body {
+    margin-top: 20px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid;
+  }
+
+  .handheld-hydraulic-iron {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 8px;
+  }
+
+  .straightening-repairing-iron {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    background: transparent;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .learn-more {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .card.New1 {
+      max-width: 200px;
+    }
+
+    .handheld-hydraulic-iron {
+      font-size: 14px;
+    }
+
+    .straightening-repairing-iron {
+      font-size: 13px;
+    }
+
+    .frame {
+      height: 35px;
+    }
+
+    .learn-more {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card.New1 {
+      max-width: 100%;
+    }
+
+    .handheld-hydraulic-iron {
+      font-size: 12px;
+    }
+
+    .straightening-repairing-iron {
+      font-size: 12px;
+    }
+
+    .frame {
+      height: 30px;
+    }
+
+    .learn-more {
+      font-size: 9px;
+    }
+  }
+  /* VideoHomePage */
+  .HomePage_video{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:775px ;
+    border-radius: 49px;
+  }
+
+  .HomePage-videocontainer {
+    margin-top: 150px;
+}
+/* Danh mục dịch vụ */
+.HomePage-Danhmuc-Background{
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+  background: #19b8af;
+  opacity: 0.6;
+  border-radius: 78px;
+  box-shadow: 0 3px 23px 0 rgba(0, 71, 240, 0.13);
+}
+img.HomePage-Danhmuc-img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50px;
+  background-size: cover;
+  z-index: 2;
+}
+
+.HomePage-Danhmuc-Background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.HomePage-Danhmuc-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  left: 599px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  z-index: 5;
+}
