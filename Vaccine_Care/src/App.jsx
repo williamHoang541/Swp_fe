@@ -11,6 +11,8 @@ import BillPage from "./Page/Customer/BillPage/BillPage";
 import ProfileChildPage from "./Page/Customer/ProfileChildPage/ProfileChildPage";
 import VaccinationSchedule from "./Page/Customer/VaccinationSchedule/VaccinationSchedule";
 import AboutPage from "./Page/AboutPage/AboutPage";
+import VaccinePrice from "./Page/VaccinePrice/VaccinePrice";
+import CamNangPage from "./Page/CamNangPage/CamNangPage";
 
 const App = () => {
   return (
@@ -25,9 +27,8 @@ const App = () => {
         <Route path="/profilechild" element={<ProfileChildPage />} />
         <Route path="/Vaccination" element={<VaccinationSchedule />} />
         <Route path="/Aboutus" element={<AboutPage />} />
-
-
-
+        <Route path="/priceVaccine" element={<VaccinePrice />} />
+        <Route path="/camNang" element={<CamNangPage />} />
 
         {/* success */}
         <Route path="/successregis" element={<SuccessRegis />} />
