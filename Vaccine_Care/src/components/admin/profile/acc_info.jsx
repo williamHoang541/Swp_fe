@@ -1,11 +1,12 @@
 import React from 'react';
 import './acc_info.css'; // Đảm bảo bạn đã tạo file CSS này
+import profileImage from '@/assets/cat.jpg';
 
 const AccInfo = () => {
     return (
         <div className="acc-info-container">
             <div className="profile-picture">
-                <img src="assets/profile.jpg" alt="Profile" />
+                <img src={profileImage} alt="Profile" />
             </div>
             <div className="info">
                 <h2>Thông tin tài khoản</h2>
