@@ -1,3 +1,90 @@
-.sidebar{
-    width: 250px;
+.sidebar {
+  width: 210px;
+  background-color: #fff;
+  height: 100vh;
+  padding-top: 20px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar_main {
+  display: flex;
+  flex-direction: column;
+  gap: 350px;
+}
+
+.sidebar_menu,
+.sidebar_menu_1 {
+  list-style: none;
+}
+
+.sidebar_menu li,
+.sidebar_menu_1 li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar_menu li a,
+.sidebar_menu_1 li a {
+  color: #333;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sidebar_menu li:hover,
+.sidebar_menu_1 li:hover {
+  background-color: #19b8b064;
+  color: #f1eded;
+}
+
+.sidebar_menu li a:hover,
+.sidebar_menu_1 li a:hover {
+  color: #f1eded;
+}
+
+.icon {
+  font-size: 14px;
+}
+
+.sidebar_menu li.active,
+.sidebar_menu_1 li.active {
+  background-color: #19b8af;
+}
+
+.sidebar_menu li.active:hover,
+.sidebar_menu_1 li.active:hover {
+  background-color: #19b8b064;
+}
+
+.sidebar_menu li.active a,
+.sidebar_menu_1 li.active a {
+  color: #f1eded;
+}
+
+.sidebar_menu_1 {
+  border-top: 2px solid #e8e8e8;
+  padding-top: 5px;
+}
+
+.sidebar.collapsed .sidebar_menu li a,
+.sidebar.collapsed .sidebar_menu_1 li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar_menu li a span,
+.sidebar.collapsed .sidebar_menu_1 li a span {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar_menu li a .icon,
+.sidebar.collapsed .sidebar_menu_1 li a .icon {
+  margin-right: 0;
 }

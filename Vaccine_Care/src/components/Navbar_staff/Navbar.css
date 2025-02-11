@@ -29,13 +29,14 @@
 }
 .icon{
     display: flex;
+    font-size: 16px;
 }
 
 .navbar_form_search{
     border: 1px solid transparent;
     font-size: 13px;
     height: 48px;
-    background: #fff;
+    background: #eceef1;
     box-shadow: 0 3px 16px rgba(142, 134, 171, .05);
     width: 300px;
     border-radius: 30px;
@@ -47,6 +48,10 @@
     color: #2b2d3b;
     outline: none;
     
+}
+
+.navbar_form_search:focus{
+    border-color: #19b8af;
 }
 
 .navbar_form_search::placeholder{
@@ -97,11 +102,18 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #eceef1;
     box-shadow: 0 3px 16px rgba(142, 134, 171, .05);
     margin: 0 8px;
     transition: .3s;
     border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.navbar_menu_btn:hover{
+    background-color: #19b8af;
+    color: #fff;
 }
 
 .navbar_top_bar_custom{
@@ -120,7 +132,11 @@
 }
 
 .navbar_top_bar{
-    background-color: #f7f9fb;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 .navbar_logo{

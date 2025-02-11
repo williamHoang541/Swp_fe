@@ -1,16 +1,21 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar_staff/Navbar";
 import Sidebar from "../../components/Sidebar_staff/Sidebar";
 import "./Layout.css";
 
 const Layout = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  }
   return (
     <Fragment>
-      <Navbar className="layout_manage_navbar" />
-      <div className="layout_container">
+      <Navbar toggleSidebar={toggleSidebar} className="layout_manage_navbar" />
+      <div className={`layout_container ${isCollapsed ? "collapsed" : ""}`}>
         <div className="sidebar_container">
-          <Sidebar />
+          <Sidebar isCollapsed={isCollapsed}/>
         </div>
         <div className="content_outlet">
           <Outlet />
