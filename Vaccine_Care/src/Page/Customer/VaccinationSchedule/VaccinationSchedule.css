@@ -10,10 +10,10 @@ line-height: 19.43px;
 }
 th.align-middle.VaccinPage-Title {
     color: white;
-    background: #19B8AF;
+    background: var(--primary-colorVaccine);
 }
 h3.VaccinPage-Intro.p-2.text-center.text-white {
-    background: #19B8AF;
+    background: var(--primary-colorVaccine);
     --bs-bg-opacity: 1;
     margin-bottom: 0px;
     border-radius: 25px 25px 0px 0px;

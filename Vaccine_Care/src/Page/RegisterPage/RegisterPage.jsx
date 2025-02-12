@@ -14,8 +14,6 @@ function RegisterPage() {
      
   return (
     <div className='HomePage-Allcontainer'>
-      {/* header */}
-      <HeaderGuest/>
       {/* Body-Regis */}
       <div className="HomePage-main-container">
              <div className="flex-column-eb">
@@ -74,8 +72,6 @@ function RegisterPage() {
               </div>
              </div>
     </div>
-        {/* Footer */}
-          <FooterGuest/>
     </div>
   )
 }

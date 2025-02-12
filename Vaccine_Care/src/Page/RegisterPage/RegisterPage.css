@@ -39,7 +39,7 @@
     font-size: x-large;
 }
 button.Regis-button {
-    background-color: #19b8af;
+    background-color: var(--primary-colorVaccine);
     width: 440px;
     height: 50px;
     border-radius: 8px;

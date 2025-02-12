@@ -48,7 +48,7 @@ const HeaderGuest = () => {
 
         {/* Navigation dạng desktop */}
         <nav className="header-navigation desktop-menu">
-          <Link to="/home" className="Header-text">Trang chủ</Link>
+          <Link to="/" className="Header-text">Trang chủ</Link>
           <Link to="/Aboutus" className="Header-text hover:underline">Giới thiệu</Link>
           <div className="Header-text header-dropdown relative group">
             <div className="Header-text hover:underline">Vắc xin trẻ em</div>

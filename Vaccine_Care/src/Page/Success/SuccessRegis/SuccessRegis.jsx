@@ -5,7 +5,7 @@ function SuccessRegis() {
   return (
     <div className='SuccessRegis-container'>
       <div className='SuccessRegis-title'>Chúc mừng bạn đã đăng ký tài khoản thành công</div>
-      <Link to='/home'><div className='SuccessRegis-button'>
+      <Link to='/'><div className='SuccessRegis-button'>
         Trang chủ
       </div></Link>
     </div>

@@ -25,8 +25,6 @@ const [gender, setGender] = useState("Nam");
 
 
     <div className='HomePage-Allcontainer'>
-    {/* header */}
-    <HeaderGuest/>
     {/* Body-Vaccin Profile child */}
     <div className="HomePage-main-container">
            <div className='container'>
@@ -166,8 +164,6 @@ const [gender, setGender] = useState("Nam");
     </div>
 
 
-      {/* Footer */}
-<FooterGuest/>
   </div>
   );
 };

@@ -19,7 +19,7 @@
   
   .AboutusPage-mục2 {
     background: #f8f9fa;
-    border-left: 5px solid #19b8af;
+    border-left: 5px solid var(--primary-colorVaccine);
     padding: 15px;
     margin: 15px 0;
     border-radius: 5px;
@@ -28,7 +28,7 @@
   .AboutusPage-litte-Title {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #19b8af;
+    color: var(--primary-colorVaccine);
     margin-bottom: 10px;
   }
   

@@ -13,7 +13,7 @@
     flex-shrink: 0;
     width: 660px;
     height: 76px;
-    color: #19B8AF;
+    color: var(--primary-colorVaccine);
     font-family: Manrope;
     font-size: 80px;
     font-style: normal;
@@ -30,7 +30,7 @@ align-items: center;
 flex-shrink: 0;
 margin-top: 190px;
     border-radius: 8px;
-    background: #19B8AF;
+    background: var(--primary-colorVaccine);
     color: white;
 }
 .SuccessRegis-button:hover{

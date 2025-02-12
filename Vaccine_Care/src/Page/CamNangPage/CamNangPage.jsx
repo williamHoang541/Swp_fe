@@ -20,7 +20,7 @@ const CamNangPage = () => {
 
   return (
     <div>
-          <HeaderGuest />
+         
           
        <div className="CamNangPage-container container my-4">
       <h2 className="text-center  VaccineTitle">Lịch Tiêm Chủng Cho Trẻ</h2>
@@ -75,7 +75,7 @@ const CamNangPage = () => {
         </table>
       </div>
        </div>
-       <FooterGuest />
+     
     </div>
 
   );

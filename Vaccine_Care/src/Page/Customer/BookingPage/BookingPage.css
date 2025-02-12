@@ -9,7 +9,7 @@
 .BookingPage-heading-protected-together {
     height: 84px;
     margin: 0 0 0 0;
-    color: #19b8af;
+    color: var(--primary-colorVaccine);
     font-family: Manrope, var(--default-font-family);
     font-size: 80px;
     font-weight: 800;
@@ -112,7 +112,7 @@ width: 500px;
     flex-shrink: 0;
     border-radius: 6px;
     border: 1px solid #1F28AF;
-    background: #19B8AF;
+    background: var(--primary-colorVaccine);
     color: #FFF;
     text-align: center;
     font-family: Roboto;

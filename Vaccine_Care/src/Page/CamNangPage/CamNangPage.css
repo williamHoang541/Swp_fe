@@ -7,7 +7,7 @@
   }
   
   .CamNangPage-table thead th {
-    background-color: #19b8af;
+    background-color:var(--primary-colorVaccine);
     color: white;
     text-align: center;
     vertical-align: middle;

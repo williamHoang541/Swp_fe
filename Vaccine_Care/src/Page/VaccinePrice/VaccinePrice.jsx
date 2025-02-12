@@ -54,7 +54,6 @@ function VaccinePrice() {
 
   return (
     <div>
-      <HeaderGuest />
       {/* bảng giá  */}
       <div className="container mt-4">
         <h2 className="text-center VaccineTitle">Danh Sách Vắc Xin</h2>
@@ -122,7 +121,6 @@ function VaccinePrice() {
         </div>
       </div>
 
-      <FooterGuest />
     </div>
   );
 }

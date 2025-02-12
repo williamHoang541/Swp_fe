@@ -19,21 +19,6 @@ function AboutPage() {
 
   return (
     <div className='HomePage-Allcontainer'>
-      {/* header */}
-      <HeaderGuest/>
-      {/* Body-homepage */}
-
-      {/* <div className="HomePage-main-container">
-             <div className='container'>
-              <div className='row'>
-                <div className='col-12 mt-152 BookingPage-titletitle'>
-                <div className="BookingPage-heading-protected-together">
-          Giới thiệu về chúng tôi
-        </div>
-                </div>
-              </div>
-             </div>
-    </div> */}
 
         {/* Đặt Lịch */}
         <div className='BookingPage-container'>
@@ -160,8 +145,7 @@ Bước 4: Theo dõi và cập nhật thông tin tiêm chủng thường xuyên 
             </div>
 
         </div>
-        {/* Footer */}
-<FooterGuest/>
+
     </div>
   )
 }

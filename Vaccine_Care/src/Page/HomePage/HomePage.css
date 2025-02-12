@@ -22,7 +22,7 @@
     width: 60px;
     height: 60px;
     margin: 0 0 0 0;
-    background: #19b8af;
+    background: var(--primary-colorVaccine);
     z-index: 12;
     overflow: visible auto;
     border-radius: 500px;
@@ -93,7 +93,7 @@
   .HomPage-heading-protected-together {
     height: 76px;
     margin: 0 0 0 0;
-    color: #19b8af;
+    color: var(--primary-colorVaccine);
     font-family: Manrope, var(--default-font-family);
     font-size: 56px;
     font-weight: 800;
@@ -179,7 +179,7 @@
     bottom: -18.67px;
     left: 295.55px;
     cursor: pointer;
-    background: #19b8af;
+    background: var(--primary-colorVaccine);
     border: none;
     z-index: 9;
     border-radius: 8px;
@@ -208,13 +208,13 @@
   .HomPage-Hotlinelink {
     background-color: transparent;
     height: 52.67px;
-    width: 238.28px;
+    width: 253px;
     text-align: -webkit-right;
     display: flex;
     align-items: center;
     gap: 15px;
     border-radius: 8px;
-    border: 1px solid #19b8af ;
+    border: 1px solid var(--primary-colorVaccine) ;
 }
   .HomePage-iconPhone {
     margin-left: 30px;
@@ -235,7 +235,7 @@
     height: 24px;
     top: 325.66px;
     left: calc(50% - 278.63px);
-    color: #19b8af;
+    color: var(--primary-colorVaccine);
     font-family: Manrope, var(--default-font-family);
     font-size: 18px;
     font-weight: 800;
@@ -247,120 +247,118 @@
   }
 
   /* Danh mục */
-  .HomePage-tilte {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px;
+/* Container chính */
+.HomePage-Danhmuc {
+  padding: 20px 0;
 }
-.HomePage-dm{
-  font-size: 30px;
-  font-weight: 700;
+
+/* Tiêu đề */
+.HomePage-tilte {
+  margin-bottom: 20px;
 }
-  .latest-project {
+
+/* Card Vaccine */
+.HomePage-card {
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.HomePage-card:hover {
+  transform: scale(1.05);
+}
+
+/* Ảnh vaccine */
+.HomePage-card-actions {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.HomePage-card-image {
+  display: block;
+  overflow: hidden;
+}
+
+.HomePage-card-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s ease-in-out;
+}
+
+.HomePage-card-image:hover img {
+  transform: scale(1.2);
+  transition: transform 3s ease-in-out;
+}
+
+/* Nút xem chi tiết nổi */
+.HomePage-card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #1c7adc;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.HomePage-card-actions:hover .HomePage-card-btn {
+  opacity: 1;
+}
+
+.HomePage-card-btn:hover {
+  background-color: #155a8a;
+}
+
+/* Nội dung card */
+.HomePage-card-body {
+  padding: 15px;
+}
+
+.HomePage-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.HomePage-card-text {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+a.btn.btn-primary.textdetail {
     display: flex;
-    flex-wrap: wrap;
-    gap: 130px;
+    background-color: var(--primary-colorVaccine);
     justify-content: center;
-    padding: 20px;
-    margin-top: 100px;
-}
-
-  .card.New1 {
-    width: 100%;
-    max-width: 250px;
-    border: 1px solid aliceblue;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-
-  .card-body {
     margin-top: 20px;
-    padding: 16px;
-    text-align: center;
-    border: 1px solid;
+    border: 1px solid darkcyan;
+}
+
+/* RESPONSIVE - Điều chỉnh số cột theo kích thước màn hình */
+@media (max-width: 1024px) { /* Tablet */
+  .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
+}
 
-  .handheld-hydraulic-iron {
-    font-size: 16px;
-    font-weight: 700;
-    color: #2a2a2a;
-    margin-bottom: 8px;
+@media (max-width: 768px) { /* Mobile */
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
+}
 
-  .straightening-repairing-iron {
-    font-size: 14px;
-    color: #666666;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-
-  .frame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 150px;
-    height: 40px;
-    margin: 0 auto;
-    background: transparent;
-    border: 1px solid #666666;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .learn-more {
-    font-size: 12px;
-    font-weight: 700;
-    color: #666666;
-    text-transform: uppercase;
-    letter-spacing: 1.1px;
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .card.New1 {
-      max-width: 200px;
-    }
-
-    .handheld-hydraulic-iron {
-      font-size: 14px;
-    }
-
-    .straightening-repairing-iron {
-      font-size: 13px;
-    }
-
-    .frame {
-      height: 35px;
-    }
-
-    .learn-more {
-      font-size: 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .card.New1 {
-      max-width: 100%;
-    }
-
-    .handheld-hydraulic-iron {
-      font-size: 12px;
-    }
-
-    .straightening-repairing-iron {
-      font-size: 12px;
-    }
-
-    .frame {
-      height: 30px;
-    }
-
-    .learn-more {
-      font-size: 9px;
-    }
-  }
   /* VideoHomePage */
   .HomePage_video{
     display: flex;
@@ -378,7 +376,7 @@
   width: 100%;
   height: 450px;
   margin: 0 auto;
-  background: #19b8af;
+  background: var(--primary-colorVaccine);
   opacity: 0.6;
   border-radius: 78px;
   box-shadow: 0 3px 23px 0 rgba(0, 71, 240, 0.13);
@@ -408,4 +406,14 @@ img.HomePage-Danhmuc-img {
   font-size: 30px;
   font-weight: 700;
   z-index: 5;
+}
+
+.HomePage-dm{
+  line-height: 56px;
+    font-weight: 800;
+    font-family: Manrope;
+    color: #0a083b;
+}
+.HomePage-DichVu.container {
+  margin-top: 100px;
 }

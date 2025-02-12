@@ -14,8 +14,6 @@ function LoginPage() {
      
   return (
     <div className='HomePage-Allcontainer'>
-      {/* header */}
-      <HeaderGuest/>
       {/* Body-Regis */}
       <div className="HomePage-main-container">
              <div className="flex-column-eb">
@@ -65,8 +63,6 @@ function LoginPage() {
               </div>
              </div>
     </div>
-        {/* Footer */}
-          <FooterGuest/>
     </div>
   )
 }

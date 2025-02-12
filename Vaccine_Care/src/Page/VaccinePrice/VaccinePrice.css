@@ -1,17 +1,4 @@
-/* .vaccine-table {
-    background-color: #19b8af !important;
-    color: white !important;
-  }
-  
-  .vaccine-table thead {
-    background-color: #128a7a !important;
-    color: white !important;
-  }
-  
-  .vaccine-table tbody tr:hover {
-    background-color: #0e7668 !important;
-    transition: background-color 0.3s ease !important;
-  } */
+
   .vaccine-tableTitle{
     background-color: #128a7a !important;
     color: white !important;
@@ -37,7 +24,7 @@
   .vaccine-table tbody td:nth-child(5),  /* Cột Giá bán lẻ */
   .vaccine-table tbody td:nth-child(6),  /* Cột Giá ưu đãi */
   .vaccine-table tbody td:nth-child(7) { /* Cột Tình trạng */
-    background-color: #19b8af; /* Màu xanh đậm */
+    background-color: var(--primary-colorVaccine); /* Màu xanh đậm */
     color: white;
   }
   

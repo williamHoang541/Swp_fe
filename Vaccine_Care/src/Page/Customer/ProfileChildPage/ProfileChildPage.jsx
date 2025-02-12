@@ -17,8 +17,6 @@ function ProfileChildPage() {
 
   return (
     <div className='HomePage-Allcontainer'>
-      {/* header */}
-      <HeaderGuest/>
       {/* Body-homepage */}
 
       <div className="HomePage-main-container">
@@ -85,9 +83,6 @@ function ProfileChildPage() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-<FooterGuest/>
     </div>
   )
 }

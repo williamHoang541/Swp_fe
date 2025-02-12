@@ -2,7 +2,7 @@
   margin-top: 400px;
     width: 100%;
     height: 800px;
-    background: linear-gradient(to bottom, linen, #19b8af);
+    background: linear-gradient(to bottom, linen, var(--primary-colorVaccine));
 }
 .bg-shadow {
     position: relative;
@@ -48,7 +48,7 @@
     bottom: 38.5px;
     left: 57%;
     cursor: pointer;
-    background: #19b8af;
+    background: var(--primary-colorVaccine);
     border: none;
     transform: translate(251.14%, 0);
     z-index: 8;
