@@ -1,9 +1,10 @@
 .sidebar {
   width: 210px;
   background-color: #fff;
-  height: 100vh;
-  padding-top: 20px;
+  height: 85vh;
+  padding-top: 10px;
   transition: width 0.3s ease-in-out;
+  border-right: 1px solid #e8e8e8;
 }
 
 .sidebar.collapsed {
@@ -34,7 +35,7 @@
   font-size: 13px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 }
 
 .sidebar_menu li:hover,
@@ -68,7 +69,7 @@
 }
 
 .sidebar_menu_1 {
-  border-top: 2px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
   padding-top: 5px;
 }
 

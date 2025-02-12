@@ -1,5 +1,3 @@
-
-/* Đặt layout chính */
 .layout_container {
   display: flex;
   background-color: #f7f9fb;
@@ -7,22 +5,20 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Sidebar cuộn riêng nếu nội dung dài */
 .sidebar_container {
-  width: 210px; /* Độ rộng sidebar */
-  overflow-y: auto; /* Cuộn riêng nếu nội dung dài */
+  width: 210px; 
+  overflow-y: auto; 
   overflow-x: hidden;
   transition: width 0.3s ease-in-out;
 }
 
-/* Nội dung chính luôn căn giữa */
 .content_outlet {
-  flex-grow: 1; /* Chiếm hết phần còn lại */
+  flex-grow: 1; 
   padding: 20px;
   transition: margin-left 0.3s ease-in-out;
-  overflow: hidden; /* Đảm bảo nội dung chính không bị tràn */
+  overflow: hidden; 
 }
 
 .layout_container.collapsed .content_outlet {
-  margin-left: -130px; /* Khi sidebar thu nhỏ */
+  margin-left: -130px; 
 }

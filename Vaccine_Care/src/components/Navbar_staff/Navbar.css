@@ -32,6 +32,10 @@
     font-size: 16px;
 }
 
+.icon:hover{
+    color: #19b8af;
+}
+
 .navbar_form_search{
     border: 1px solid transparent;
     font-size: 13px;
@@ -55,7 +59,7 @@
 }
 
 .navbar_form_search::placeholder{
-    color: #96a0b5;
+    color: #808080;
 }
 
 
@@ -78,7 +82,7 @@
     align-items: center;
     transition: .3s;
     margin-bottom: 0;
-
+    margin-right: 10px;
 }
 
 .navbar_text{
@@ -87,6 +91,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #333;
 }
 
 .navbar_welcome{
@@ -121,12 +126,11 @@
     transition: .3s;
     justify-content: space-between;
     display: flex;
-
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar_container{
     width: 100%;
-    padding-right: 10px;
     margin-right: auto;
     margin-left: auto;
 }
