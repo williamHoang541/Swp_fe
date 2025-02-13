@@ -19,12 +19,12 @@ import VaccineListPage from "./Page/VaccineListPage/VaccineListPage";
 import AdminDashboard from "./components/admin/admin";
 import Dashboard from "./components/admin/dashboard/Dashboard";
 import Staff from "./components/admin/staff/Staff";
-import Vaccine from "./components/admin/vaccine/Vaccine";
 import Acc_Info from "./components/admin/profile/acc_info";
 import { PATH_NAME } from "./constant/pathname";
 import Layout from "./Layout/Layout_Staff/Layout";
 import Injection from "./pages/staff/staff1/Injection_infor/Injection";
-import Vaccine from "./pages/staff/staff1/Vaccine/Vaccine";
+import Vaccinestaff from "./pages/staff/staff1/Vaccine/Vaccine";
+import Vaccine from "./components/admin/vaccine/Vaccine";
 const App = () => {
   return (
     <Routes>
@@ -51,7 +51,7 @@ const App = () => {
            {/*staff*/}
         <Route element={<Layout />}>
           <Route path={PATH_NAME.INJECTION_INFOR} element={<Injection />} />
-          <Route path={PATH_NAME.VACCINE} element={<Vaccine />} />
+          <Route path={PATH_NAME.VACCINE} element={<Vaccinestaff />} />
         </Route>
       
       {/* Routes không có Header & Footer */}
