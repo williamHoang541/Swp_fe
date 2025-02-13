@@ -27,12 +27,12 @@
     background-color: transparent;
     color: #96a0b5;
 }
-.icon{
+.icon_search{
     display: flex;
     font-size: 16px;
 }
 
-.icon:hover{
+.icon_search:hover{
     color: #19b8af;
 }
 

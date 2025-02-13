@@ -12,7 +12,7 @@ const Sidebar = ({ isCollapsed }) => {
   return (
     <aside className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
       <div className="sidebar_main">
-        <ul className="sidebar_menu">
+        <ul className="sidebar_menu_container">
           <li className={location.pathname === PATH_NAME.INJECTION_INFOR ? "active" : ""}>
             <NavLink
               to={PATH_NAME.INJECTION_INFOR}
@@ -30,7 +30,7 @@ const Sidebar = ({ isCollapsed }) => {
             </NavLink>
           </li>
         </ul>
-        <ul className="sidebar_menu_1">
+        <ul className="sidebar_menu_container_1">
           <li className={location.pathname === PATH_NAME.SETTING ? "active" : ""}>
             <NavLink
               to={PATH_NAME.SETTING}
