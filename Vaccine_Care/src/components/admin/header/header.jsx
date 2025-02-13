@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import logo from '../../../assets/logo.png'; // Adjust the path as necessary
+import logo from '../../../assets/logo_vaccine.png'; // Adjust the path as necessary
 
 const Header = () => {
     return (
