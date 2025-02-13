@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FooterGuest from "../../../components/login/Footer-Guest/FooterGuest";
-import HeaderGuest from "../../../components/login/Header-Guest/HeaderGuest";
 import "./VaccinationSchedule.css";
 const VaccinationSchedule = () => {
   const headers = ["","2", "3", "4", "6", "7", "8", "9", "10-11", "12", "18", "2", "3-4", "5-6", "7-8"];
