@@ -7,7 +7,7 @@
   font-family: sans-serif, 'Roboto';
 }
 
-img {
+img, button {
   cursor: pointer;
 }
 
