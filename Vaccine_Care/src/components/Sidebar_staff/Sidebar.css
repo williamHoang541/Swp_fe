@@ -44,13 +44,14 @@
 
 .sidebar_menu_container li:hover,
 .sidebar_menu_container_1 li:hover {
-  background-color: #19b8b064;
-  color: #f1eded;
+  background-color: #19b8b03a;
+  color: #19b8af;
+  font-weight: bold;
 }
 
 .sidebar_menu_container li a:hover,
 .sidebar_menu_container_1 li a:hover {
-  color: #f1eded;
+  color: #19b8af;
 }
 
 .icon {

@@ -1,14 +1,43 @@
 import { useState } from "react";
 import "./Injection.css";
 import { Table } from "antd";
+import { motion } from "framer-motion";
+import Booking from "../Booking/Booking";
+import Confirm from "../Confirm/Confirm";
+import Invoice from "../Invoice/Invoice";
+import Completed from "../Completed/Completed";
+import React from "react";
+
 
 const Injection = () => {
   const [activeTab, setActiveTab] = useState("today");
+  const [selectedRecord, setSelectedRecord] = useState(null);
+  const steps = [
+    {name: "Đặt lịch",component: Booking},
+    {name: "Xác nhận",component: Confirm},
+    {name: "Thanh toán",component: Invoice},
+    {name: "Tiêm/Chờ",component: Booking},
+    {name: "Hoàn Thành",component: Completed},
+  ];
+  const [currentStep, setCurrentStep] = useState(0);
+  
 
   const statusMap = {
     pending: { label: "Chờ duyệt", className: "status_pending" },
     processing: { label: "Đang xử lý", className: "status_processing" },
     completed: { label: "Đã xong", className: "status_completed" },
+  };
+
+  const nextStep = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const prevStep = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
   };
 
   const [data, setData] = useState([
@@ -86,14 +115,14 @@ const Injection = () => {
     {
       title: "Ngày tiêm",
       dataIndex: "date",
-      width: "20%",
+      width: "15%",
       sorter: (a, b) => (a.date || "").localeCompare(b.date || ""),
       render: (date) => date || "N/A",
     },
     {
       title: "Trạng thái",
       dataIndex: "status",
-      width: "10%",
+      width: "15%",
       render: (status) => (
         <span className={`status_label ${statusMap[status].className}`}>
           {statusMap[status].label}
@@ -104,6 +133,14 @@ const Injection = () => {
     {
       title: "Chi tiết",
       width: "10%",
+      render: (_, record) => (
+        <button
+          className="injection_detail_button"
+          onClick={() => setSelectedRecord(record)}
+        >
+          Chi tiết
+        </button>
+      ),
     },
   ];
 
@@ -130,36 +167,84 @@ const Injection = () => {
         </button>
       </div>
 
-      {/* Tab Content */}
       <div className="injection_tab_content">
-        {activeTab === "today" ? (
-          <div>
-            <Table
-              columns={columns}
-              rowKey={(record) => record.id}
-              dataSource={data}
-              pagination={{
-                ...tableParams.pagination,
-                showSizeChanger: true,
-                pageSizeOptions: ["10", "20", "50"],
-              }}
-            />
-          </div>
-        ) : (
-          <div>
-          <Table
-              columns={columns}
-              rowKey={(record) => record.id}
-              dataSource={data1}
-              pagination={{
-                ...tableParams.pagination,
-                showSizeChanger: true,
-                pageSizeOptions: ["10", "20", "50"],
-              }}
-            />
-          </div>
-        )}
+        <Table
+          columns={columns}
+          rowKey={(record) => record.id}
+          dataSource={activeTab === "today" ? data : data1}
+        />
       </div>
+      {selectedRecord && (
+        <div className="popup_overlay" onClick={() => setSelectedRecord(null)}>
+          <div className="popup_container" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="popup_close"
+              onClick={() => setSelectedRecord(null)}
+            >
+              ✖
+            </button>
+            <div className="popup_content">
+              <h3>Theo dõi tiến trình</h3>
+              <div className="step-container">
+                {steps.map((step, index) => (
+                  <div key={index} className="step-wrapper">
+                    <motion.div
+                      className={`step-circle ${
+                        index <= currentStep ? "active" : "inactive"
+                      }`}
+                      animate={{ scale: index === currentStep ? 1.2 : 1 }}
+                    >
+                      {index < currentStep ||
+                      (index === steps.length - 1 &&
+                        currentStep === steps.length - 1)
+                        ? "✔"
+                        : index + 1}
+                    </motion.div>
+                    <span
+                      className={`step-label ${
+                        index <= currentStep ? "active-text" : "inactive-text"
+                      }`}
+                    >
+                      {step.name}
+                    </span>
+                  </div>
+                ))}
+                <motion.div
+                  className="progress-bar"
+                  style={{
+                    width: `${(currentStep / (steps.length - 1)) * 100}%`,
+                  }}
+                  initial={{ width: 0 }}
+                  animate={{
+                    width: `${(currentStep / (steps.length - 1)) * 100}%`,
+                  }}
+                />
+              </div>
+
+              <div className="step-content">
+              {React.createElement(steps[currentStep].component, { record: selectedRecord })}
+            </div>
+
+              <div className="button-group">
+                <button
+                  className="prev-button"
+                  onClick={prevStep}
+                  disabled={currentStep === 0}
+                >
+                  Trở lại
+                </button>
+                <button
+                  className="next-button"
+                  onClick={nextStep}
+                  disabled={currentStep >= steps.length - 1}
+                >
+                  Tiếp theo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
