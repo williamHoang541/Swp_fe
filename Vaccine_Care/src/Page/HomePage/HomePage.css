@@ -1,5 +1,5 @@
 .HomePage-main-container{
-    width: 1920px;
+    width: 100%;
     height: 700px;
     margin: 0 auto;
     background: rgba(232, 242, 255, 0.2)
@@ -17,11 +17,10 @@
     transform: translate(0, -55.56%);
     z-index: 20;
   }
-  .background {
-    /* position: relative; */
+  .background-1 {
     width: 60px;
     height: 60px;
-    margin: 0 0 0 0;
+    margin: 20px 0 0 0;
     background: var(--primary-colorVaccine);
     z-index: 12;
     overflow: visible auto;

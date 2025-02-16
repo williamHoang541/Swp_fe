@@ -4,4 +4,5 @@ export const PATH_NAME = {
   LOGOUT: "#",
   VACCINE: "/staff/vaccine",
   CAMNANG: "/camNang",
+  HOME: "/",
 };

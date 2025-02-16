@@ -13,7 +13,7 @@
 
   .Header-main-container {
     position: relative;
-    width: 1920px;
+    width: 100%;
     height: 46.39px;
     margin: 0 auto;
     background: var(--primary-colorVaccine);

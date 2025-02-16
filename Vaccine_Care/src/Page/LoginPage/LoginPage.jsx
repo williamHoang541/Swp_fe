@@ -78,7 +78,6 @@ function LoginPage() {
             <div className="col-6">
               <div className="Regis-from">
                 <div className="Regis-title">Mời bạn đăng nhập:</div>
-                {error && <p className="text-danger">{error}</p>}
                 <div className="Regis-input">
                   <div className="Regis-info">Tên đăng nhập:</div>
                   <input
@@ -114,6 +113,7 @@ function LoginPage() {
                     </a>
                   </div>
                 </div>
+                {error && <p className="Regis-error text-danger">{error}</p>}
               </div>
             </div>
 

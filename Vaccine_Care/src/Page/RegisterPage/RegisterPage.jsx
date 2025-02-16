@@ -20,7 +20,7 @@ function RegisterPage() {
   };
 
   const handleRegister = async () => {
-    setError(null); // Reset lỗi trước khi gửi request
+    setError(null); 
     try {
       const response = await fetch(
         "https://swdsapelearningapi.azurewebsites.net/api/User/registration",
@@ -54,7 +54,6 @@ function RegisterPage() {
             <div className="col-6">
               <div className="Regis-from">
                 <div className="Regis-title">Đăng ký ở đây:</div>
-                {error && <p className="text-danger">{error}</p>}
                 <div className="Regis-input">
                   <div className="Regis-info">Tên:</div>
                   <input
@@ -104,6 +103,7 @@ function RegisterPage() {
                     Gửi
                   </button>
                 </div>
+                {error && <p className="Regis-error text-danger">{error}</p>}
               </div>
             </div>
 
