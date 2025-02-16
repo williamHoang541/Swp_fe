@@ -44,7 +44,7 @@
 }
 
 .sidebar a.active, .sidebar a:hover {
-    background-color: #19B8AF;
+    background-color: var(--primary-colorVaccine);
     color: white;
     font-weight: bold;
     transform: scale(1.05);
@@ -55,6 +55,6 @@
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid #19B8AF;
+    border: 2px solid var(--primary-colorVaccine);
     margin-bottom: 20px;
 } 

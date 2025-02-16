@@ -1,20 +1,27 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../../../src/context/AuthContext"; // Kiểm tra đường dẫn đúng
+import { Link, useNavigate } from "react-router-dom";
 import "./HeaderGuest.css";
 import logo_vaccine from '../../../assets/logo_vaccine.png';
 import Searchicon from '../../../assets/header/Search-icon.png';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; 
 const HeaderGuest = () => {
-  // State để kiểm soát trạng thái mở/đóng của drawer
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const { isLoggedIn, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
 
+  const handleLogout = () => {
+    logout(); 
+    navigate("/login"); 
+  };
+
   return (
     <header>
-      {/* Header top tĩnh (có thể giữ nguyên nếu cần) */}
       <div className="Header-main-container">
         <div className="Header-iconContainer">
           <div className="Header-symbol-1" />
@@ -25,74 +32,92 @@ const HeaderGuest = () => {
         <div className="Header-localtion">
           <span className="Header-dai-hoc-fpt-quan">Đại Học FPT Quận 9</span>
           <span className="Header-phone-number">0374277590</span>
-          <div className="Header-icon" />
-          <div className="Header-symbol" />
         </div>
       </div>
 
-      {/* Phần header chính */}
       <div className="header-content mx-auto flex items-center justify-between">
-        {/* Logo */}
         <div className="header-logo flex items-center space-x-3">
           <img src={logo_vaccine} alt="Vaxi Logo" className="w-10 h-10" />
         </div>
 
-        {/* Nút hamburger để mở Drawer (chỉ hiển thị trên mobile) */}
-        <div className="drawer-toggle" onClick={toggleDrawer}>
-          <div className={`hamburger ${isDrawerOpen ? "open" : ""}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        {/* Navigation dạng desktop */}
         <nav className="header-navigation desktop-menu">
           <Link to="/" className="Header-text">Trang chủ</Link>
           <Link to="/Aboutus" className="Header-text hover:underline">Giới thiệu</Link>
-          <div className="Header-text header-dropdown relative group">
-            <div className="Header-text hover:underline">Vắc xin trẻ em</div>
-            <div className="dropdown-menu hidden group-hover:block bg-white text-black rounded shadow-lg mt-2">
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Loại 1</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Loại 2</a>
+          <Link to="/Aboutus" className="Header-text hover:underline">Vắc xin trẻ em</Link>
+          <Link to="/priceVaccine" className="Header-text hover:underline">Bảng giá</Link>
+          <Link to="/camNang" className="Header-text hover:underline">Cẩm nang</Link>
+          <Link to="/camNang" className="Header-text hover:underline">Tin tức</Link>
+          {isLoggedIn ? (
+            <div className="HeaderG-flex2">
+ <Link to="/profilechild" className="Header-text hover:underline">Hồ sơ trẻ</Link>
+ <Link to="/bill" className="Header-text hover:underline">Hóa đơn</Link>
             </div>
-          </div>
-          <Link to ='/priceVaccine' className="Header-text hover:underline">Bảng giá</Link>
-          <Link to='/camNang' className="Header-text hover:underline">Cẩm nang</Link>
-          <div className="Header-text hover:underline">Tin tức</div>
-          <Link to="/profilechild" className="Header-text hover:underline">Hồ sơ trẻ</Link>
-          <Link to="/bill" className="Header-text hover:underline">Hóa đơn</Link>
+         
+        ) : (
+<div></div>
+        )}
         </nav>
 
-        {/* Phần bên phải */}
         <div className="header-right-side flex items-center space-x-4">
           <div className="header-search relative">
             <img src={Searchicon} alt="Search" className="w-10 h-10" />
           </div>
-          <a href="/register" className="header-register px-4 py-2 bg-teal-700 rounded-full hover:bg-teal-600">Đăng ký</a>
-          <a href="/login" className="header-login px-4 py-2 bg-teal-700 rounded-full hover:bg-teal-600">Đăng nhập</a>
+          {isLoggedIn ? (
+            <div className="header-flex"> 
+
+            <Link to='/createchild' className="header-createChild ">
+              Tạo Hồ sơ 
+            </Link>
+            <div className="dropdown">
+      <i
+        className="bi bi-bell-fill header-logout-icon "
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style={{ fontSize: "24px", cursor: "pointer" }}
+      ></i>
+
+      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a className="dropdown-item" href="#">🔔 Thông báo 1</a></li>
+        <li><a className="dropdown-item" href="#">🔔 Thông báo 2</a></li>
+        <li><a className="dropdown-item" href="#">🔔 Xem tất cả</a></li>
+      </ul>
+    </div>
+            <i className="bi bi-box-arrow-in-right header-logout-icon" onClick={handleLogout}></i>
+            </div>
+
+          ) : (
+            <>
+              <Link to="/register" className="header-register ">
+                Đăng ký
+              </Link>
+              <Link to="/login" className="header-login ">
+                Đăng nhập
+              </Link>
+            </>
+          )}
         </div>
       </div>
 
       {/* Drawer Navigation dành cho mobile */}
       <div className={`drawer ${isDrawerOpen ? "open" : ""}`}>
         <nav className="drawer-navigation">
-          <Link to="/home" className="drawer-link" onClick={toggleDrawer}>Trang chủ</Link>
+          <Link to="/" className="drawer-link" onClick={toggleDrawer}>Trang chủ</Link>
           <Link to="/Aboutus" className="drawer-link" onClick={toggleDrawer}>Giới thiệu</Link>
-          <div className="drawer-dropdown">
-            <div className="drawer-link">Vắc xin trẻ em</div>
-            <div className="drawer-dropdown-menu">
-              <a href="#" className="drawer-sublink" onClick={toggleDrawer}>Loại 1</a>
-              <a href="#" className="drawer-sublink" onClick={toggleDrawer}>Loại 2</a>
-            </div>
-          </div>
-          <a href="#" className="drawer-link" onClick={toggleDrawer}>Bảng giá</a>
-          <a href="#" className="drawer-link" onClick={toggleDrawer}>Cẩm nang</a>
-          <a href="#" className="drawer-link" onClick={toggleDrawer}>Tin tức</a>
+          <Link to="/priceVaccine" className="drawer-link" onClick={toggleDrawer}>Bảng giá</Link>
+          <Link to="/camNang" className="drawer-link" onClick={toggleDrawer}>Cẩm nang</Link>
           <Link to="/profilechild" className="drawer-link" onClick={toggleDrawer}>Hồ sơ trẻ</Link>
           <Link to="/bill" className="drawer-link" onClick={toggleDrawer}>Hóa đơn</Link>
-          <a href="/register" className="drawer-link" onClick={toggleDrawer}>Đăng ký</a>
-          <a href="/login" className="drawer-link" onClick={toggleDrawer}>Đăng nhập</a>
+          {isLoggedIn ? (
+            <button className="drawer-link text-red-600" onClick={handleLogout}>
+              Đăng xuất
+            </button>
+          ) : (
+            <>
+              <Link to="/register" className="drawer-link" onClick={toggleDrawer}>Đăng ký</Link>
+              <Link to="/login" className="drawer-link" onClick={toggleDrawer}>Đăng nhập</Link>
+            </>
+          )}
         </nav>
       </div>
     </header>
@@ -100,3 +125,4 @@ const HeaderGuest = () => {
 };
 
 export default HeaderGuest;
+

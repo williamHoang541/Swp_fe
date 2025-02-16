@@ -40,7 +40,7 @@ const App = () => {
       <Route path="/vaccination" element={<MainLayout><VaccinationSchedule /></MainLayout>} />
       <Route path="/aboutus" element={<MainLayout><AboutPage /></MainLayout>} />
       <Route path="/priceVaccine" element={<MainLayout><VaccinePrice /></MainLayout>} />
-      <Route path="/camNang" element={<MainLayout><CamNangPage /></MainLayout>} />
+      <Route path={PATH_NAME.CAMNANG} element={<MainLayout><CamNangPage /></MainLayout>} />
       {/* Admin */}
       <Route path="/admin" element={<AdminDashboard />}>
           <Route path="acc_info" element={<Acc_Info />} />

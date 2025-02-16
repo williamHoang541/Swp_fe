@@ -69,7 +69,7 @@ function CreatechildPage() {
       </div>
       <div className='CreatechildPage-title'>
       <div className='SuccessRegis-title'>Chăm sóc từng mũi tiêm trọn vẹn</div>
-      <Link to='/home'><div className='CreatechildPage-button'>
+      <Link to='/'><div className='CreatechildPage-button'>
         Tạo
       </div></Link>
       </div>

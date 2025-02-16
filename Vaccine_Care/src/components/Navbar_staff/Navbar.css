@@ -33,7 +33,7 @@
 }
 
 .icon:hover{
-    color: #19b8af;
+    color: var(--primary-colorVaccine);
 }
 
 .navbar_form_search{
@@ -55,7 +55,7 @@
 }
 
 .navbar_form_search:focus{
-    border-color: #19b8af;
+    border-color: var(--primary-colorVaccine);
 }
 
 .navbar_form_search::placeholder{
@@ -117,7 +117,7 @@
 }
 
 .navbar_menu_btn:hover{
-    background-color: #19b8af;
+    background-color: var(--primary-colorVaccine);
     color: #fff;
 }
 

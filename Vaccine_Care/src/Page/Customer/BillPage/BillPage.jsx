@@ -59,9 +59,11 @@ function BillPage() {
 
 
         {/* Danh mục dịch vụ */}
-        <div className='HomePage-DichVu'>
-        <div className='HomePage-tilte'>
-        <div className='HomePage-dm'>Danh mục dịch vụ</div>
+        <div className='HomePage-DichVu container'>
+        <div className='HomePage-tilte rowrow'>
+        <div className="col-6">
+        <h2 className='HomePage-dm'>Danh mục dịch vụ</h2>
+            </div>
             </div>
           <div className='container'>
             <div className='row'>

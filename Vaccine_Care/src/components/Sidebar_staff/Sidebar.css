@@ -55,7 +55,7 @@
 
 .sidebar_menu li.active,
 .sidebar_menu_1 li.active {
-  background-color: #19b8af;
+  background-color: var(--primary-colorVaccine);
 }
 
 .sidebar_menu li.active:hover,
