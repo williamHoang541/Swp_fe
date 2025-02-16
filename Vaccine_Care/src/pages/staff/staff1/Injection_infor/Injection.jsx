@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Booking from "../Booking/Booking";
 import Confirm from "../Confirm/Confirm";
 import Invoice from "../Invoice/Invoice";
+import Inject_Wait from "../Inject_Wait/Inject_Wait";
 import Completed from "../Completed/Completed";
 import React from "react";
 
@@ -16,7 +17,7 @@ const Injection = () => {
     {name: "Đặt lịch",component: Booking},
     {name: "Xác nhận",component: Confirm},
     {name: "Thanh toán",component: Invoice},
-    {name: "Tiêm/Chờ",component: Booking},
+    {name: "Tiêm/Chờ",component: Inject_Wait},
     {name: "Hoàn Thành",component: Completed},
   ];
   const [currentStep, setCurrentStep] = useState(0);
@@ -26,6 +27,7 @@ const Injection = () => {
     pending: { label: "Chờ duyệt", className: "status_pending" },
     processing: { label: "Đang xử lý", className: "status_processing" },
     completed: { label: "Đã xong", className: "status_completed" },
+    canceled: { label: "Đã hủy", className: "status_canceled" },
   };
 
   const nextStep = () => {
@@ -38,6 +40,19 @@ const Injection = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
+  };
+
+  const handleCancel = (id) => {
+    setData((prevData) =>
+      prevData.map((item) =>
+        item.id === id ? { ...item, status: "canceled" } : item
+      )
+    );
+    setData1((prevData) =>
+      prevData.map((item) =>
+        item.id === id ? { ...item, status: "canceled" } : item
+      )
+    );
   };
 
   const [data, setData] = useState([
@@ -132,14 +147,24 @@ const Injection = () => {
 
     {
       title: "Chi tiết",
-      width: "10%",
+      width: "15%",
       render: (_, record) => (
-        <button
-          className="injection_detail_button"
-          onClick={() => setSelectedRecord(record)}
-        >
-          Chi tiết
-        </button>
+        <div className="inject_detail">
+      <button
+        className={`injection_detail_button ${record.status === "canceled" ? "disabled-button" : ""}`}
+        onClick={() => record.status !== "canceled" && setSelectedRecord(record)}
+        disabled={record.status === "canceled"}
+      >
+        Chi tiết
+      </button>
+      <button
+        className={`injection_cancel_button ${record.status === "canceled" ? "disabled-button" : ""}`}
+        onClick={() => record.status !== "canceled" && handleCancel(record.id)}
+        disabled={record.status === "canceled"}
+      >
+        Hủy
+      </button>
+    </div>
       ),
     },
   ];

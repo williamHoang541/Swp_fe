@@ -106,3 +106,12 @@
   background-color: #19b8b03a;
   color: #19b8af;
 }
+
+:where(.css-dev-only-do-not-override-1yacf91).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+    border-color: #19b8af !important;
+    background-color: #19b8af !important;
+}
+
+:where(.css-dev-only-do-not-override-1yacf91).ant-radio-wrapper:hover .ant-radio-inner {
+    border-color: #19b8af !important;
+}

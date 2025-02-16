@@ -23,7 +23,6 @@
 }
 
 .injection_tab_content {
-  padding: 10px;
   background: #f9f9f9;
   border-radius: 5px;
   margin-top: 10px;
@@ -57,6 +56,16 @@
   color: #28a745;
 }
 
+.status_canceled{
+  background-color: #8080803b;
+  color: #808080;
+}
+
+.inject_detail{
+  display: flex;
+  gap: 10px;
+}
+
 .injection_detail_button {
   background: #19b8b03a;
   color: #19b8af;
@@ -66,9 +75,25 @@
   cursor: pointer;
 }
 
-.injection_detail_button:hover {
+.injection_detail_button:hover, .injection_cancel_button:hover {
   font-weight: bold;
 }
+
+.injection_cancel_button{
+  background: #b8195b3a;
+  color: #b8195b;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.disabled-button{
+  background-color: #8080803a !important;
+  cursor: not-allowed !important;
+  color: #808080;
+}
+
 /*Popup*/
 .popup_overlay {
   position: fixed;
