@@ -1,0 +1,19 @@
+.booking{
+    text-align: center;
+    padding: 10px;
+    margin: 50px 0;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.booking h3{
+    color: #333;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+:where(.css-dev-only-do-not-override-1yacf91).ant-table-wrapper {
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+}

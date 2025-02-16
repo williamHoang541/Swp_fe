@@ -27,7 +27,7 @@ const Navbar = ({ toggleSidebar }) => {
                 <form role="search" action="#" method="get" className="navbar_form">
                     <input type="search" className="navbar_form_search" name="search" placeholder="Tìm kiếm..." />
                     <button className="navbar_search_btn" type="submit">
-                        <CiSearch className="icon"/>
+                        <CiSearch className="icon_search"/>
                     </button>
                 </form>
             </li>

@@ -27,13 +27,13 @@
     background-color: transparent;
     color: #96a0b5;
 }
-.icon{
+.icon_search{
     display: flex;
     font-size: 16px;
 }
 
-.icon:hover{
-    color: var(--primary-colorVaccine);
+.icon_search:hover{
+    color: #19b8af;
 }
 
 .navbar_form_search{
@@ -146,6 +146,7 @@
 .navbar_logo{
     background-color: #fff;
     height: 105px;
+    border-right: 1px solid #e8e8e8;
 }
 
 .navbar_li{

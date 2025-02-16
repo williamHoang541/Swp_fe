@@ -4,7 +4,8 @@
   height: 85vh;
   padding-top: 10px;
   transition: width 0.3s ease-in-out;
-  border-right: 1px solid #e8e8e8;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .sidebar.collapsed {
@@ -17,20 +18,23 @@
   gap: 350px;
 }
 
-.sidebar_menu,
-.sidebar_menu_1 {
+.sidebar_menu_container_1,
+.sidebar_menu_container {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.sidebar_menu li,
-.sidebar_menu_1 li {
+.sidebar_menu_container_1 li,
+.sidebar_menu_container li {
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.sidebar_menu li a,
-.sidebar_menu_1 li a {
+.sidebar_menu_container li a,
+.sidebar_menu_container_1 li a {
   color: #333;
   font-size: 14px;
   display: flex;
@@ -38,54 +42,52 @@
   gap: 15px;
 }
 
-.sidebar_menu li:hover,
-.sidebar_menu_1 li:hover {
-  background-color: #19b8b064;
-  color: #f1eded;
+.sidebar_menu_container li:hover,
+.sidebar_menu_container_1 li:hover {
+  background-color: #19b8b03a;
+  color: #19b8af;
+  font-weight: bold;
 }
 
-.sidebar_menu li a:hover,
-.sidebar_menu_1 li a:hover {
-  color: #f1eded;
+.sidebar_menu_container li a:hover,
+.sidebar_menu_container_1 li a:hover {
+  color: #19b8af;
 }
 
 .icon {
   font-size: 14px;
 }
 
-.sidebar_menu li.active,
-.sidebar_menu_1 li.active {
-  background-color: var(--primary-colorVaccine);
+.sidebar_menu_container li.active,
+.sidebar_menu_container_1 li.active {
+  background-color: #19b8af;
+  font-weight: 550;
 }
 
-.sidebar_menu li.active:hover,
-.sidebar_menu_1 li.active:hover {
-  background-color: #19b8b064;
+.sidebar_menu_container li.active a,
+.sidebar_menu_container_1 li.active a {
+  color: #f1eded !important;
 }
 
-.sidebar_menu li.active a,
-.sidebar_menu_1 li.active a {
-  color: #f1eded;
-}
-
-.sidebar_menu_1 {
+.sidebar_menu_container_1 {
   border-top: 1px solid #e8e8e8;
   padding-top: 5px;
 }
 
-.sidebar.collapsed .sidebar_menu li a,
-.sidebar.collapsed .sidebar_menu_1 li a {
+.sidebar.collapsed .sidebar_menu_container li a,
+.sidebar.collapsed .sidebar_menu_container_1 li a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sidebar.collapsed .sidebar_menu li a span,
-.sidebar.collapsed .sidebar_menu_1 li a span {
+.sidebar.collapsed .sidebar_menu_container li a span,
+.sidebar.collapsed .sidebar_menu_container_1 li a span {
   display: none;
 }
 
-.sidebar.collapsed .sidebar_menu li a .icon,
-.sidebar.collapsed .sidebar_menu_1 li a .icon {
+.sidebar.collapsed .sidebar_menu_container li a .icon,
+.sidebar.collapsed .sidebar_menu_container_1 li a .icon {
   margin-right: 0;
+  font-size: 18px;
 }
