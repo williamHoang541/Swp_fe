@@ -114,6 +114,7 @@
     margin-top: 152px;
 }
   .welcome-software-management {
+    text-shadow: 2px 2px 4px #000000;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -122,7 +123,7 @@
     top: 156.66px;
     right: 115.92px;
     left: 4px;
-    color: #57d8d0;
+    color: white;
     font-family: Manrope, var(--default-font-family);
     font-size: 18px;
     font-weight: 500;
