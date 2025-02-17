@@ -41,8 +41,7 @@ const Sidebar = ({ isCollapsed }) => {
           </li>
           <li className={location.pathname === PATH_NAME.LOGOUT ? "active" : ""}>
             <NavLink
-              to={PATH_NAME.HOME}
-              
+              to={PATH_NAME.HOME} 
             >
               <FaPowerOff className="icon" /> {!isCollapsed && "Đăng xuất"}
             </NavLink>
