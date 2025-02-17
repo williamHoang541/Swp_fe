@@ -11,7 +11,7 @@ const Navbar = ({ toggleSidebar }) => {
         <nav className="navbar_top_bar_custom">
           <ul className="navbar_top_bar_item_list">
           <li className="navbar_li">
-            <img src={logo} alt="" className="navbar_logo"/>
+            <img src={logo} alt="" className="navbar_logo_staff"/>
           </li>
             <li className="navbar_li">
                 <button className="navbar_menu_btn" onClick={toggleSidebar}>
