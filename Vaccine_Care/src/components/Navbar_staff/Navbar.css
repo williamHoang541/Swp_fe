@@ -83,6 +83,7 @@
     transition: .3s;
     margin-bottom: 0;
     margin-right: 10px;
+    padding-left: 0 !important;
 }
 
 .navbar_text{
@@ -143,12 +144,18 @@
     width: 100%;
 }
 
-.navbar_logo_staff{
-    background-color: #fff;
+.navbar_logo_staff{  
     height: 105px;
-    border-right: 1px solid #e8e8e8;
 }
 
 .navbar_li{
     list-style: none;
+}
+
+.navbar_img_staff{
+ width: 210px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-right: 1px solid #e8e8e8;
 }
