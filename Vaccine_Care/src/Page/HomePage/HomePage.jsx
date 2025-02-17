@@ -18,7 +18,7 @@ function HomePage() {
 
       <div className="HomePage-main-container">
              <div className="flex-column-eb">
-        <div className="background">
+        <div className="background-1">
           <div className="svg">
             <div className="svg-fill">
               <div className="svg-1" />
