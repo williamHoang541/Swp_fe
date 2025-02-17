@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './SidebarAdmin.css'; // Create a separate CSS file for sidebar styles
+import './SidebarAdmin.css';
+import { FaUser, FaTachometerAlt, FaUsers, FaSyringe } from 'react-icons/fa';
 
 const SidebarAdmin = ({ isCollapsed }) => {
     const location = useLocation();
@@ -10,25 +11,25 @@ const SidebarAdmin = ({ isCollapsed }) => {
             <ul>
                 <li>
                     <Link to="/admin/acc_info" className={location.pathname === '/admin/acc_info' ? 'active' : ''}>
-                        <i className="fas fa-user"></i>
+                        <FaUser className="sidebar-icon" />
                         {!isCollapsed && "Acc info"}
                     </Link>
                 </li>
                 <li>
                     <Link to="/admin/dashboard" className={location.pathname === '/admin/dashboard' ? 'active' : ''}>
-                        <i className="fas fa-tachometer-alt"></i>
+                        <FaTachometerAlt className="sidebar-icon" />
                         {!isCollapsed && "Dashboard"}
                     </Link>
                 </li>
                 <li>
                     <Link to="/admin/staff" className={location.pathname === '/admin/staff' ? 'active' : ''}>
-                        <i className="fas fa-users"></i>
+                        <FaUsers className="sidebar-icon" />
                         {!isCollapsed && "Nhân viên"}
                     </Link>
                 </li>
                 <li>
                     <Link to="/admin/vaccine" className={location.pathname === '/admin/vaccine' ? 'active' : ''}>
-                        <i className="fas fa-syringe"></i>
+                        <FaSyringe className="sidebar-icon" />
                         {!isCollapsed && "Vaccine"}
                     </Link>
                 </li>
