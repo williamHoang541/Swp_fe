@@ -1,107 +1,84 @@
-import React, { useState } from 'react';
-import './dashboard.css'; // Create a new CSS file for dashboard styles
+import React from 'react';
+import './dashboard.css';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { Users, Calendar, Bed, UserCheck } from 'lucide-react';
 
 const Dashboard = () => {
-    const [orders, setOrders] = useState([
-        { id: '00001', name: 'Christine Brooks', address: '089 Kutch Green Apt. 448', date: '04 Sep 2019', type: 'Electric', status: 'Completed' },
-        { id: '00002', name: 'Rosie Pearson', address: '979 Immanuel Ferry Suite 526', date: '28 May 2019', type: 'Book', status: 'Processing' },
-        { id: '00003', name: 'Darrell Caldwell', address: '8587 Frida Ports', date: '23 Nov 2019', type: 'Medicine', status: 'Rejected' },
-        { id: '00004', name: 'Gilbert Johnston', address: '768 Destiny Lake Suite 600', date: '05 Feb 2019', type: 'Mobile', status: 'Completed' },
-        { id: '00005', name: 'Alan Cain', address: '042 Mylene Throughway', date: '29 Jul 2019', type: 'Watch', status: 'Processing' },
-        { id: '00006', name: 'Alfred Murray', address: '543 Weinman Mountain', date: '15 Aug 2019', type: 'Medicine', status: 'Completed' },
-        { id: '00007', name: 'Maggie Sullivan', address: 'New Scottieberg', date: '21 Dec 2019', type: 'Watch', status: 'Processing' },
-        { id: '00008', name: 'Rosie Todd', address: 'New Jon', date: '30 Apr 2019', type: 'Medicine', status: 'On Hold' },
-        { id: '00009', name: 'Dollie Hines', address: '124 Lyla Forge Suite 975', date: '09 Jan 2019', type: 'Book', status: 'In Transit' },
-    ]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 5; // Số lượng đơn hàng hiển thị trên mỗi trang
-    const [sortOption, setSortOption] = useState('name');
+    const stats = [
+        { name: 'Total Patients', value: 1234, icon: <Users className="h-8 w-8" /> },
+        { name: 'Appointments Today', value: 45, icon: <Calendar className="h-8 w-8" /> },
+        { name: 'Available Beds', value: 23, icon: <Bed className="h-8 w-8" /> },
+        { name: 'Staff on Duty', value: 78, icon: <UserCheck className="h-8 w-8" /> },
+    ];
 
-    const handleSort = (option) => {
-        const sortedOrders = [...orders].sort((a, b) => {
-            if (option === 'name') {
-                return a.name.localeCompare(b.name);
-            } else if (option === 'id') {
-                return a.id.localeCompare(b.id);
-            } else if (option === 'date') {
-                return new Date(a.date) - new Date(b.date);
-            } else if (option === 'type') {
-                return a.type.localeCompare(b.type);
-            } else if (option === 'status') {
-                return a.status.localeCompare(b.status);
-            }
-            return 0;
-        });
-        setOrders(sortedOrders);
-    };
+    const departmentData = [
+        { name: 'Cardiology', patients: 150 },
+        { name: 'Neurology', patients: 120 },
+        { name: 'Pediatrics', patients: 200 },
+        { name: 'Orthopedics', patients: 80 },
+        { name: 'Oncology', patients: 100 },
+    ];
 
-    const handleSortChange = (event) => {
-        setSortOption(event.target.value);
-        handleSort(event.target.value);
-    };
-
-    const handlePageChange = (direction) => {
-        if (direction === 'next') {
-            setCurrentPage(prev => Math.min(prev + 1, Math.ceil(orders.length / itemsPerPage)));
-        } else {
-            setCurrentPage(prev => Math.max(prev - 1, 1));
-        }
-    };
-
-    const indexOfLastOrder = currentPage * itemsPerPage;
-    const indexOfFirstOrder = indexOfLastOrder - itemsPerPage;
-    const currentOrders = orders.slice(indexOfFirstOrder, indexOfLastOrder);
+    // Colors for pie chart sections
+    const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#a4de6c'];
 
     return (
-        <div className="dashboard-container">
-            <h1 className="text-left">Danh sách Dashboard</h1>
-            <div className="top-bar">
-                <select value={sortOption} onChange={handleSortChange} className="sort-dropdown">
-                    <option value="name">Sort by Name</option>
-                    <option value="id">Sort by ID</option>
-                    <option value="date">Sort by Date</option>
-                    <option value="type">Sort by Type</option>
-                    <option value="status">Sort by Status</option>
-                </select>
-            </div>
-            <table className="order-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {currentOrders.map(order => (
-                        <tr key={order.id}>
-                            <td>{order.id}</td>
-                            <td>{order.name}</td>
-                            <td>{order.address}</td>
-                            <td>{order.date}</td>
-                            <td>{order.type}</td>
-                            <td>
-                                <span className={`status ${order.status.toLowerCase()}`}>
-                                    {order.status}
-                                </span>
-                            </td>
-                        </tr>
+        <div className="admin">
+            <div className="admin-dashboard-container">
+                <h1 className="admin-dashboard-title">Hospital Dashboard</h1>
+                <div className="admin-dashboard-stats-grid">
+                    {stats.map((stat, index) => (
+                        <div key={index} className="admin-dashboard-stat-card">
+                            <div className="admin-dashboard-stat-icon">
+                                {stat.icon}
+                            </div>
+                            <div className="admin-dashboard-stat-info">
+                                <h2>{stat.value}</h2>
+                                <p>{stat.name}</p>
+                            </div>
+                        </div>
                     ))}
-                </tbody>
-            </table>
-            <div className="pagination">
-                <button onClick={() => handlePageChange('prev')} disabled={currentPage === 1} className="nav-button">
-                    &#9664; Previous
-                </button>
-                <button onClick={() => handlePageChange('next')} disabled={indexOfLastOrder >= orders.length} className="nav-button">
-                    Next &#9654;
-                </button>
+                </div>
+                <div className="admin-dashboard-charts-container">
+                    <div className="admin-dashboard-pie-chart-container">
+                        <h2>Patient Distribution</h2>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <PieChart>
+                                <Pie
+                                    data={departmentData}
+                                    cx="50%"
+                                    cy="50%"
+                                    labelLine={false}
+                                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                                    outerRadius={100}
+                                    fill="#8884d8"
+                                    dataKey="patients"
+                                >
+                                    {departmentData.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                    ))}
+                                </Pie>
+                                <Tooltip />
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
+                    <div className="admin-dashboard-bar-chart-container">
+                        <h2>Patients by Department</h2>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <BarChart data={departmentData}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Bar dataKey="patients" fill="#8884d8" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
 
-export default Dashboard; 
+export default Dashboard;
