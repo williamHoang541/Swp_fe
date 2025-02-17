@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './sidebarAdmin.css'; // Create a separate CSS file for sidebar styles
+import './SidebarAdmin.css'; // Create a separate CSS file for sidebar styles
 
 const SidebarAdmin = ({ isCollapsed }) => {
     const location = useLocation();
