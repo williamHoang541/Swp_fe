@@ -54,7 +54,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-container">
-            <h1>Order Lists</h1>
+            <h1 className="text-left">Danh sách Dashboard</h1>
             <div className="top-bar">
                 <select value={sortOption} onChange={handleSortChange} className="sort-dropdown">
                     <option value="name">Sort by Name</option>
@@ -83,7 +83,11 @@ const Dashboard = () => {
                             <td>{order.address}</td>
                             <td>{order.date}</td>
                             <td>{order.type}</td>
-                            <td className={`status ${order.status.toLowerCase()}`}>{order.status}</td>
+                            <td>
+                                <span className={`status ${order.status.toLowerCase()}`}>
+                                    {order.status}
+                                </span>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

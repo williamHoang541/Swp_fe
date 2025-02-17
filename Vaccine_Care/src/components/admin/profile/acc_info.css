@@ -13,10 +13,10 @@
 }
 
 .profile-picture img {
-    width: 150px; /* Kích thước của ảnh profile */
-    height: 150px;
-    border-radius: 50%; /* Hình tròn */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    width: 200px; /* Increase the width */
+    height: 200px; /* Increase the height */
+    border-radius: 50%; /* Keep it circular */
+    object-fit: cover; /* Ensure the image does not get distorted */
 }
 
 .info {

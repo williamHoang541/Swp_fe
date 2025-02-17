@@ -1,24 +1,30 @@
 import React from 'react';
 import './header.css';
 import logo from '../../../assets/logo_vaccine.png'; // Adjust the path as necessary
+import profileImage from '../../../assets/cat.jpg'; // Ensure this path is correct
 
 const Header = () => {
     return (
         <div className="header">
             <div className="header-title">
                 <img src={logo} alt="Logo" className="header-logo" />
-                Admin
+                <span className="header-admin-text">Hello, Admin</span>
             </div>
-            <div className="search-container">
-                <input type="text" placeholder="Search" className="search-input" />
+            <div className="header-search-container">
+                <input 
+                    type="text" 
+                    placeholder="Search..." 
+                    className="header-search-input" 
+                    aria-label="Search"
+                />
             </div>
             <div className="icons">
-                <div className="notification-bell">
+                <div className="notification-bell" aria-label="Notifications">
                     <i className="fas fa-bell"></i>
                     <span className="notification-count">3</span>
                 </div>
                 <div className="profile-picture">
-                    <img src="assets/cat.jpg" alt="Profile" />
+                    <img src={profileImage} alt="Profile" />
                 </div>
             </div>
         </div>

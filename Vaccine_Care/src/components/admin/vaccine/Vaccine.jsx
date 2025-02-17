@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import './vaccine.css'; // Tạo file CSS cho trang Vaccine
+import './vaccine.css';
 
 const Vaccine = () => {
     const [vaccines, setVaccines] = useState([
         { id: 1, name: 'Vaccine A', type: 'Vaccine ngừa bệnh', dosage: '2 liều', status: 'Sẵn có' },
         { id: 2, name: 'Vaccine B', type: 'Vaccine ngừa bệnh', dosage: '1 liều', status: 'Hết hàng' },
         { id: 3, name: 'Vaccine C', type: 'Vaccine ngừa bệnh', dosage: '3 liều', status: 'Sẵn có' },
-        // Thêm vaccine khác nếu cần
     ]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
@@ -39,7 +38,6 @@ const Vaccine = () => {
         }
     };
 
-    // Calculate current vaccines for pagination
     const indexOfLastVaccine = currentPage * itemsPerPage;
     const indexOfFirstVaccine = indexOfLastVaccine - itemsPerPage;
     const currentVaccines = vaccines.slice(indexOfFirstVaccine, indexOfLastVaccine);
@@ -54,7 +52,7 @@ const Vaccine = () => {
                     <option value="status">Sort by Status</option>
                 </select>
             </div>
-            <table className="vaccine-table">
+            <table className="vaccine-table-admin">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -88,4 +86,4 @@ const Vaccine = () => {
     );
 };
 
-export default Vaccine; 
+export default Vaccine;

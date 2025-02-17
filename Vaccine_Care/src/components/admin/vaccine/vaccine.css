@@ -5,23 +5,31 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.vaccine-table {
+.vaccine-table-admin {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.vaccine-table th, .vaccine-table td {
+.vaccine-table-admin th, .vaccine-table-admin td {
     padding: 12px;
     border: 1px solid #e0e0e0;
     text-align: left;
 }
 
-.vaccine-table th {
+.vaccine-table-admin th {
     background-color: #f9f9f9;
     font-weight: bold;
 }
 
-.vaccine-table tr:hover {
-    background-color: #f1f1f1; /* Hiệu ứng hover cho hàng */
-} 
+.vaccine-table-admin tr:hover {
+    background-color: #f1f1f1;
+}
+
+.vaccine-admin-pagination {
+    margin-top: 20px;
+}
+
+.nav-button {
+    margin: 0 5px;
+}
