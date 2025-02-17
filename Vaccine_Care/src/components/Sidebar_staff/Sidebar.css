@@ -1,4 +1,4 @@
-.sidebar-staff {
+.sidebar_staff {
   width: 210px;
   background-color: #fff;
   height: 85vh;
@@ -8,7 +8,7 @@
   border-radius: 5px;
 }
 
-.sidebar-staff.collapsed {
+.sidebar_staff.collapsed {
   width: 80px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .sidebar_menu_container_1,
-.sidebar_menu_container {
+.sidebar_menu_container_staff {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -27,13 +27,13 @@
 }
 
 .sidebar_menu_container_1 li,
-.sidebar_menu_container li {
+.sidebar_menu_container_staff li {
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.sidebar_menu_container li a,
+.sidebar_menu_container_staff li a,
 .sidebar_menu_container_1 li a {
   color: #333;
   font-size: 14px;
@@ -42,14 +42,14 @@
   gap: 15px;
 }
 
-.sidebar_menu_container li:hover,
+.sidebar_menu_container_staff li:hover,
 .sidebar_menu_container_1 li:hover {
   background-color: #19b8b03a;
   color: #19b8af;
   font-weight: bold;
 }
 
-.sidebar_menu_container li a:hover,
+.sidebar_menu_container_staff li a:hover,
 .sidebar_menu_container_1 li a:hover {
   color: #19b8af;
 }
@@ -58,13 +58,13 @@
   font-size: 14px;
 }
 
-.sidebar_menu_container li.active,
+.sidebar_menu_container_staff li.active,
 .sidebar_menu_container_1 li.active {
   background-color: #19b8af;
   font-weight: 550;
 }
 
-.sidebar_menu_container li.active a,
+.sidebar_menu_container_staff li.active a,
 .sidebar_menu_container_1 li.active a {
   color: #f1eded !important;
 }
@@ -74,20 +74,20 @@
   padding-top: 5px;
 }
 
-.sidebar.collapsed .sidebar_menu_container li a,
-.sidebar.collapsed .sidebar_menu_container_1 li a {
+.sidebar_staff.collapsed .sidebar_menu_container_staff li a,
+.sidebar_staff.collapsed .sidebar_menu_container_1 li a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sidebar.collapsed .sidebar_menu_container li a span,
-.sidebar.collapsed .sidebar_menu_container_1 li a span {
+.sidebar_staff.collapsed .sidebar_menu_container_staff li a span,
+.sidebar_staff.collapsed .sidebar_menu_container_1 li a span {
   display: none;
 }
 
-.sidebar.collapsed .sidebar_menu_container li a .icon,
-.sidebar.collapsed .sidebar_menu_container_1 li a .icon {
+.sidebar_staff.collapsed .sidebar_menu_container_staff li a .icon,
+.sidebar_staff.collapsed .sidebar_menu_container_1 li a .icon {
   margin-right: 0;
   font-size: 18px;
 }
