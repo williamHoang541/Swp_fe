@@ -29,7 +29,7 @@
 
 .admin .admin-dashboard-stat-icon {
     margin-right: 16px;
-    color: #6366f1;
+    color: var(--primary-colorVaccine);
 }
 
 .admin .admin-dashboard-stat-info h2 {

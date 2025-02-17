@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './header/Header';
+import Header from './header/header';
 import SidebarAdmin from './sidebar_admin/SidebarAdmin';
 import './admin.css';
 
