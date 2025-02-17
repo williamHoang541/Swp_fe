@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar-staff {
   width: 210px;
   background-color: #fff;
   height: 85vh;
@@ -8,11 +8,11 @@
   border-radius: 5px;
 }
 
-.sidebar.collapsed {
+.sidebar-staff.collapsed {
   width: 80px;
 }
 
-.sidebar_main {
+.sidebar_main_staff {
   display: flex;
   flex-direction: column;
   gap: 350px;

@@ -10,8 +10,8 @@ import { FaPowerOff } from "react-icons/fa6";
 const Sidebar = ({ isCollapsed }) => {
   const location = useLocation();
   return (
-    <aside className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
-      <div className="sidebar_main">
+    <aside className={`sidebar-staff ${isCollapsed ? "collapsed" : ""}`}>
+      <div className="sidebar_main_staff">
         <ul className="sidebar_menu_container">
           <li className={location.pathname === PATH_NAME.INJECTION_INFOR ? "active" : ""}>
             <NavLink
