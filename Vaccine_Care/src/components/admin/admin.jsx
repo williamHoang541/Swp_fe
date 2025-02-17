@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './header/Header';
 import SidebarAdmin from './sidebar_admin/SidebarAdmin';
 import './admin.css';
 
 const AdminDashboard = () => {
+    const [isCollapsed, setIsCollapsed] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsCollapsed(!isCollapsed);
+    };
+
     return (
         <div className="admin-container">
-            <Header />
+            <Header toggleSidebar={toggleSidebar} />
             <div className="content-wrapper">
-                <SidebarAdmin />
+                <SidebarAdmin isCollapsed={isCollapsed} />
                 <div className="main-content">
                     <Outlet />
                 </div>

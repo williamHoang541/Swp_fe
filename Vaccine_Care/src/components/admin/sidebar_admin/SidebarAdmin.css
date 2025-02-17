@@ -5,6 +5,11 @@
     margin-right: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 80px; /* Adjust this width as needed */
 }
 
 .sidebar h2 {
@@ -22,6 +27,12 @@
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.collapsed ul {
+    display: none; /* Hide the menu items when collapsed */
 }
 
 .sidebar li {
@@ -57,4 +68,10 @@
     cursor: pointer;
     border: 2px solid var(--primary-colorVaccine);
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px; /* Adjust this width as needed */
+    }
 } 
