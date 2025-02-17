@@ -3,6 +3,7 @@
   --primary-colorVaccine: #19b8af; 
 }
 /* #19b8af */
+/* #5D8AB0 */
   .Header-main-container {
     overflow: hidden;
   }
@@ -227,7 +228,7 @@
 
 .header-logout-icon {
   margin-left: 15px;
-  font-size: 40px;
+  font-size: 20px;
   color: black;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -354,4 +355,26 @@
   .drawer-toggle {
     display: block;
   }
+}
+
+/* Tạo hiệu ứng chuyển mượt cho dropdown items */
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--primary-colorVaccine); 
+  color: white;           
+  cursor: pointer;
+}
+.kfadsjlkfsajdlfsd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kfadsjlkfsajdlfsd:hover{
+  background-color: var(--primary-colorVaccine); 
+  color: white;           
+  cursor: pointer;
 }

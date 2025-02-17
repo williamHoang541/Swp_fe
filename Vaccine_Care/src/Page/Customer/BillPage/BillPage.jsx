@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import HeaderGuest from '../../../components/login/Header-Guest/HeaderGuest'
 import "./BillPage.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import tiemle from '../../../assets/HomePage/tiemle.png'
@@ -12,8 +11,6 @@ import { Link } from 'react-router-dom';
 
 
 function BillPage() {
-
-     
 
   return (
     <div className='HomePage-Allcontainer'>
@@ -43,20 +40,18 @@ function BillPage() {
       className="BillPage-single-input"
       placeholder="Mã hóa đơn"
     />
-        <button className="submit-btn">
-          <span className="send">Thanh toán</span>
+    <Link to ='/billpayment'>
+    <button className="submit-btn">
+          <span className="BillPagesend">Thanh toán</span>
         </button>
+    </Link>
+
       </div>
                     </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-
-
 
         {/* Danh mục dịch vụ */}
         <div className='HomePage-DichVu container'>

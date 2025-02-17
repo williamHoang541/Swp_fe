@@ -25,6 +25,8 @@ import Layout from "./Layout/Layout_Staff/Layout";
 import Injection from "./pages/staff/staff1/Injection_infor/Injection";
 import Vaccinestaff from "./pages/staff/staff1/Vaccine/Vaccine";
 import Vaccine from "./components/admin/vaccine/Vaccine";
+import CusPaymentPage from "./Page/Customer/CusPaymentPage/CusPaymentPage";
+import VaccineTransactionPage from "./Page/Customer/TransactionPage/TransactionPage";
 const App = () => {
   return (
     <Routes>
@@ -41,6 +43,10 @@ const App = () => {
       <Route path="/aboutus" element={<MainLayout><AboutPage /></MainLayout>} />
       <Route path="/priceVaccine" element={<MainLayout><VaccinePrice /></MainLayout>} />
       <Route path={PATH_NAME.CAMNANG} element={<MainLayout><CamNangPage /></MainLayout>} />
+      <Route path={PATH_NAME.BILLPAYMENT} element={<MainLayout><CusPaymentPage /></MainLayout>} />
+      <Route path="/transaction" element={<MainLayout><VaccineTransactionPage /></MainLayout>} />
+
+
       {/* Admin */}
       <Route path="/admin" element={<AdminDashboard />}>
           <Route path="acc_info" element={<Acc_Info />} />
