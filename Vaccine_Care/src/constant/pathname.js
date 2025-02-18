@@ -1,8 +1,9 @@
 export const PATH_NAME = {
-  INJECTION_INFOR: "/staff/injection-in",
+  INJECTION: "/staff/injection-in",
   SETTING: "#",
   LOGOUT: "#",
   VACCINE: "/staff/vaccine",
+  INJECTION_INFORMATION: "/doctor/injection-in",
   CAMNANG: "/camNang",
   HOME: "/",
 };
