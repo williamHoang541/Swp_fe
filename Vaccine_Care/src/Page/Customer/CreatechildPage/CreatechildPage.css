@@ -54,17 +54,17 @@
     padding: 10px;
     text-align: center;
     cursor: pointer;
-    background: #f9f9f9;
+    background: white;
     font-weight: bold;
     user-select: none;
   }
   
   .CreatechildPage-custom-option:hover {
-    background: #e0e0e0;
+    background:var(--primary-colorVaccine);
   }
   
   .selected {
-    background: #d3d3d3;
+    background: var(--primary-colorVaccine);
   }
   .CreatechildPage-content-kk {
     display: flex;
@@ -94,4 +94,15 @@
     margin-top: 300px;
     margin-left: 440px;
 }
-   
+.SuccessRegis1-title {
+  flex-shrink: 0;
+  width: 660px;
+  height: 76px;
+  color: var(--primary-colorVaccine);
+  font-family: Manrope;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px;
+  margin-bottom: 40px;
+}

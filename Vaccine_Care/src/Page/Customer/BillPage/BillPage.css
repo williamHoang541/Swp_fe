@@ -17,3 +17,7 @@
 span.BillPagesend {
     color: white;
 }
+
+li.active.list-group-item {
+    background-color: var(--primary-colorVaccine);
+}
