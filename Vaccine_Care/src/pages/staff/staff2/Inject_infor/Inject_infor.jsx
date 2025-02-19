@@ -33,14 +33,6 @@ const Inject_infor = () => {
     }
   };
 
-  const handleCancel = (id) => {
-    setData((prevData) =>
-      prevData.map((item) =>
-        item.id === id ? { ...item, status: "canceled" } : item
-      )
-    );
-  };
-
   const [data, setData] = useState([
     {
       id: "VN123",
@@ -120,26 +112,10 @@ const Inject_infor = () => {
       render: (_, record) => (
         <div className="inject_detail">
           <button
-            className={`injection_detail_button ${
-              record.status === "canceled" ? "disabled-button" : ""
-            }`}
-            onClick={() =>
-              record.status !== "canceled" && setSelectedRecord(record)
-            }
-            disabled={record.status === "canceled"}
+            className="injection_detail_button"
+            onClick={() => setSelectedRecord(record)}
           >
             Chi tiết
-          </button>
-          <button
-            className={`injection_cancel_button ${
-              record.status === "canceled" ? "disabled-button" : ""
-            }`}
-            onClick={() =>
-              record.status !== "canceled" && handleCancel(record.id)
-            }
-            disabled={record.status === "canceled"}
-          >
-            Hủy
           </button>
         </div>
       ),

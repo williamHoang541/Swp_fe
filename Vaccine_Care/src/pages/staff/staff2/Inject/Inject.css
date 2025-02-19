@@ -2,17 +2,19 @@
   color: #333;
   font-size: 20px;
   font-weight: 550;
+  margin-bottom: 30px !important;
 }
 
-.inject {
+.inject-top, .inject-bottom {
   text-align: center;
   padding: 10px;
-  margin: 50px 0;
+  margin: 30px 0;
   background: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 350px;
+
 }
+
 
 .inject-content {
   display: flex;
@@ -20,9 +22,16 @@
   justify-content: center;
   text-align: left;
   gap: 10px;
+  
 }
 
-.inject-btn {
+.inject-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inject-btn, .button-update-inject {
   padding: 8px 16px;
   border: none;
   cursor: pointer;
@@ -34,7 +43,8 @@
   width: 100%;
 }
 
-.inject-btn:hover {
+.inject-btn:hover, .button-update-inject:hover {
   background-color: #19b8b03a;
   color: var(--primary-colorVaccine);
 }
+
