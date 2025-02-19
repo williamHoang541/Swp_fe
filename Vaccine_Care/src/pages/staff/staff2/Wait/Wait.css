@@ -1,0 +1,59 @@
+.wait {
+  text-align: center;
+  padding: 10px;
+  margin: 50px 0;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 350px;
+}
+
+.wait h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.wait-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.wait-notes label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wait-textarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  resize: vertical;
+}
+
+.wait-textarea:focus {
+  border: 1px solid var(--primary-colorVaccine);
+}
+
+.wait-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-colorVaccine);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 550;
+  width: 100%;
+}
+
+.wait-btn:hover {
+  background-color: #19b8b03a;
+  color: var(--primary-colorVaccine);
+}

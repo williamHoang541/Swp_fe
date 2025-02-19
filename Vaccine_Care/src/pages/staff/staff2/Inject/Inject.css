@@ -1,6 +1,6 @@
 .inject h3 {
   color: #333;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 550;
 }
 
@@ -31,6 +31,7 @@
   font-size: 14px;
   border-radius: 4px;
   font-weight: 550;
+  width: 100%;
 }
 
 .inject-btn:hover {
