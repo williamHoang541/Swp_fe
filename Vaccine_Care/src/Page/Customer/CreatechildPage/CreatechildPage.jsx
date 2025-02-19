@@ -7,7 +7,9 @@ function CreatechildPage() {
   return (
     <div className='CreatechildPage-container'>
       <div className='CreatechildPage-From'>
-        <div className='CreatechildPage-content'>
+      <div className='SuccessRegis-title'>Tạo hồ sơ trẻ em</div>
+      <div className='CreatechildPage-content-kk'>
+      <div className='CreatechildPage-content'>
             <div className='CreatechildPage-Name'>Tên của bé:</div>
             <input className='CreatechildPage-input' placeholder='Name of child '/>
         </div>
@@ -15,13 +17,16 @@ function CreatechildPage() {
             <div className='CreatechildPage-Name'>Ngày tháng năm sinh:</div>
             <input className='CreatechildPage-input' placeholder='DD/MM/YY'/>
         </div>
-        <div className='CreatechildPage-content'>
+      </div>
+      <div className='CreatechildPage-content-kk'>
+      <div className='CreatechildPage-content'>
             <div className='CreatechildPage-Name'>Họ tên mẹ:</div>
             <input className='CreatechildPage-input' placeholder='Name of mother '/>
         </div>
         <div className='CreatechildPage-content'>
             <div className='CreatechildPage-Name'>Họ tên cha:</div>
             <input className='CreatechildPage-input' placeholder='Name of dad'/>
+        </div>
         </div>
         <div className='CreatechildPage-content'>
             <div className='CreatechildPage-Name'>Số điện thoại liên lạc:</div>
