@@ -95,7 +95,7 @@
   padding: 8px 16px;
   border: none;
   cursor: pointer;
-  background-color: #19b8af;
+  background-color: var(--primary-colorVaccine);
   color: #fff;
   font-size: 14px;
   border-radius: 4px;
@@ -104,14 +104,14 @@
 
 .button_payment:hover {
   background-color: #19b8b03a;
-  color: #19b8af;
+  color: var(--primary-colorVaccine);
 }
 
 :where(.css-dev-only-do-not-override-1yacf91).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
-    border-color: #19b8af !important;
-    background-color: #19b8af !important;
+    border-color: var(--primary-colorVaccine) !important;
+    background-color: var(--primary-colorVaccine) !important;
 }
 
 :where(.css-dev-only-do-not-override-1yacf91).ant-radio-wrapper:hover .ant-radio-inner {
-    border-color: #19b8af !important;
+    border-color: var(--primary-colorVaccine) !important;
 }

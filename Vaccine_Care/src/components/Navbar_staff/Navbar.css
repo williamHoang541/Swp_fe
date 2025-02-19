@@ -33,7 +33,7 @@
 }
 
 .icon_search:hover{
-    color: #19b8af;
+    color: var(--primary-colorVaccine);
 }
 
 .navbar_form_search{

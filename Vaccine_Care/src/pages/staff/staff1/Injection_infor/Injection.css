@@ -17,9 +17,9 @@
 }
 
 .injection_tab_button.active {
-  color: #19b8af;
+  color: var(--primary-colorVaccine)f;
   font-weight: bold;
-  border-bottom: 2px solid #19b8af;
+  border-bottom: 2px solid var(--primary-colorVaccine);
 }
 
 .injection_tab_content {
@@ -68,7 +68,7 @@
 
 .injection_detail_button {
   background: #19b8b03a;
-  color: #19b8af;
+  color: var(--primary-colorVaccine);
   padding: 6px 12px;
   border: none;
   border-radius: 4px;
@@ -117,6 +117,8 @@
   max-height: 660px;
   overflow-y: scroll;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .popup_container::-webkit-scrollbar {
@@ -190,7 +192,7 @@
 }
 
 .step-circle.active {
-  background-color: #19b8af;
+  background-color: var(--primary-colorVaccine);
   color: #fff;
   transform: scale(1.2);
 }
@@ -201,7 +203,7 @@
 }
 
 .step-label.active-text {
-  color: #19b8af;
+  color: var(--primary-colorVaccine);
   font-weight: bold;
 }
 
@@ -210,7 +212,7 @@
   top: 33px;
   left: 0;
   height: 4px;
-  background-color: #19b8af;
+  background-color: var(--primary-colorVaccine);
   transition: width 0.3s ease-in-out;
   z-index: 0;
 }
@@ -225,7 +227,7 @@
   padding: 8px 16px;
   border: none;
   cursor: pointer;
-  background-color: #19b8af;
+  background-color: var(--primary-colorVaccine);
   color: #fff;
   font-size: 14px;
   border-radius: 4px;
@@ -235,7 +237,7 @@
 .prev-button:hover,
 .next-button:hover {
   background-color: #19b8b03a;
-  color: #19b8af;
+  color: var(--primary-colorVaccine);
 }
 
 .prev-button:disabled,
@@ -248,18 +250,18 @@
 
 :where(.css-dev-only-do-not-override-1yacf91).ant-pagination
   .ant-pagination-item-active {
-  border-color: #19b8af !important;
+  border-color: var(--primary-colorVaccine) !important;
 }
 
 :where(.css-dev-only-do-not-override-1yacf91).ant-pagination
   .ant-pagination-item-active
   a {
-  color: #19b8af !important;
+  color: var(--primary-colorVaccine) !important;
 }
 
 :where(.css-dev-only-do-not-override-1yacf91).ant-select-outlined:not(
     .ant-select-disabled
   ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
   .ant-select-selector {
-  border-color: #19b8af !important;
+  border-color: var(--primary-colorVaccine) !important;
 }

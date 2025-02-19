@@ -21,12 +21,14 @@ import Dashboard from "./components/admin/dashboard/Dashboard";
 import Staff from "./components/admin/staff/Staff";
 import Acc_Info from "./components/admin/profile/acc_info";
 import { PATH_NAME } from "./constant/pathname";
-import Layout from "./Layout/Layout_Staff/Layout";
+import Layout_Staff from "./Layout/Layout_Staff/Layout";
+import Layout_Doctor from "./Layout/Layout_Doctor/Layout";
 import Injection from "./pages/staff/staff1/Injection_infor/Injection";
 import Vaccinestaff from "./pages/staff/staff1/Vaccine/Vaccine";
 import Vaccine from "./components/admin/vaccine/Vaccine";
 import CusPaymentPage from "./Page/Customer/CusPaymentPage/CusPaymentPage";
 import VaccineTransactionPage from "./Page/Customer/TransactionPage/TransactionPage";
+import Inject_infor from "./pages/staff/staff2/Inject_infor/Inject_infor";
 const App = () => {
   return (
     <Routes>
@@ -55,9 +57,14 @@ const App = () => {
           <Route path="vaccine" element={<Vaccine />} />
           </Route>
            {/*staff*/}
-        <Route element={<Layout />}>
-          <Route path={PATH_NAME.INJECTION_INFOR} element={<Injection />} />
+        <Route element={<Layout_Staff />}>
+          <Route path={PATH_NAME.INJECTION} element={<Injection />} />
           <Route path={PATH_NAME.VACCINE} element={<Vaccinestaff />} />
+        </Route>
+
+        {/* doctor */}
+        <Route element={<Layout_Doctor />}>
+          <Route path={PATH_NAME.INJECTION_INFORMATION} element={<Inject_infor />} />
         </Route>
       
       {/* Routes không có Header & Footer */}
