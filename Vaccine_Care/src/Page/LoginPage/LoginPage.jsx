@@ -32,6 +32,10 @@ function LoginPage() {
       console.log("🔹 Đăng nhập với staff cục bộ, không gọi API");
       navigate("/staff/injection-in");
       return;
+    }else if(formData.username === "doctor" && formData.password === "123") {
+      console.log("🔹 Đăng nhập với staff cục bộ, không gọi API");
+      navigate("/doctor/injection-in");
+      return;
     }
   
     try {
