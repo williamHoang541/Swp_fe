@@ -26,7 +26,12 @@ import Layout_Doctor from "./Layout/Layout_Doctor/Layout";
 import Injection from "./pages/staff/staff1/Injection_infor/Injection";
 import Vaccinestaff from "./pages/staff/staff1/Vaccine/Vaccine";
 import Vaccine from "./components/admin/vaccine/Vaccine";
+import CusPaymentPage from "./Page/Customer/CusPaymentPage/CusPaymentPage";
+import VaccineTransactionPage from "./Page/Customer/TransactionPage/TransactionPage";
+import Inject_infor from "./pages/staff/staff2/Inject_infor/Inject_infor";
+import VaccinationScheduleStatus from "./Page/Customer/VaccinationScheduleStatus/VaccinationScheduleStatus";
 import PaymentHistory from './components/admin/payment_history/payment';
+
 
 const App = () => {
   return (
@@ -46,7 +51,7 @@ const App = () => {
       <Route path={PATH_NAME.CAMNANG} element={<MainLayout><CamNangPage /></MainLayout>} />
       <Route path={PATH_NAME.BILLPAYMENT} element={<MainLayout><CusPaymentPage /></MainLayout>} />
       <Route path="/transaction" element={<MainLayout><VaccineTransactionPage /></MainLayout>} />
-      <Route path="/vaccinationScheduleStatus" element={<MainLayout><VaccinationScheduleStatus /></MainLayout>} />
+      <Route path="/vaccinationScheduleStatus" element={<MainLayout><VaccinationSchedule  /></MainLayout>} />
 
 
 
