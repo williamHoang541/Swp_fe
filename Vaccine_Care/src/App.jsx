@@ -25,6 +25,8 @@ import Layout from "./Layout/Layout_Staff/Layout";
 import Injection from "./pages/staff/staff1/Injection_infor/Injection";
 import Vaccinestaff from "./pages/staff/staff1/Vaccine/Vaccine";
 import Vaccine from "./components/admin/vaccine/Vaccine";
+import PaymentHistory from './components/admin/payment_history/payment';
+
 const App = () => {
   return (
     <Routes>
@@ -43,11 +45,11 @@ const App = () => {
       <Route path={PATH_NAME.CAMNANG} element={<MainLayout><CamNangPage /></MainLayout>} />
       {/* Admin */}
       <Route path="/admin" element={<AdminDashboard />}>
-          <Route path="acc_info" element={<Acc_Info />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="staff" element={<Staff />} />
           <Route path="vaccine" element={<Vaccine />} />
-          </Route>
+          <Route path="payment-history" element={<PaymentHistory />} />
+      </Route>
            {/*staff*/}
         <Route element={<Layout />}>
           <Route path={PATH_NAME.INJECTION_INFOR} element={<Injection />} />

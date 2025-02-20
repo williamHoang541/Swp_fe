@@ -5,4 +5,5 @@ export const PATH_NAME = {
   VACCINE: "/staff/vaccine",
   CAMNANG: "/camNang",
   HOME: "/",
+  PAYMENT_HISTORY: '/admin/payment-history',
 };

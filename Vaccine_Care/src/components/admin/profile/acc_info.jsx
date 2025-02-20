@@ -1,5 +1,5 @@
 import React from 'react';
-import './acc_info.css'; // Đảm bảo bạn đã tạo file CSS này
+import './acc_info.css'; // Ensure you have created this CSS file
 import profileImage from '@/assets/cat.jpg';
 
 const AccInfo = () => {
@@ -9,11 +9,11 @@ const AccInfo = () => {
                 <img src={profileImage} alt="Profile" />
             </div>
             <div className="info">
-                <h2>Thông tin tài khoản</h2>
-                <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
-                <p><strong>Email:</strong> nguyen.vana@example.com</p>
-                <p><strong>Số điện thoại:</strong> 0123456789</p>
-                <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP.HCM</p>
+                <h2>Account Information</h2>
+                <p><strong>Full Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Phone Number:</strong> 0123456789</p>
+                <p><strong>Address:</strong> 123 ABC Street, District 1, Ho Chi Minh City</p>
             </div>
         </div>
     );

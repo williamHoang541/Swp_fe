@@ -3,16 +3,16 @@ import './vaccine.css';
 
 const Vaccine = () => {
     const [vaccines, setVaccines] = useState([
-        { id: 1, name: 'Vaccine A', type: 'Vaccine ngừa bệnh', dosage: '2 liều', status: 'Sẵn có' },
-        { id: 2, name: 'Vaccine B', type: 'Vaccine ngừa bệnh', dosage: '1 liều', status: 'Hết hàng' },
-        { id: 3, name: 'Vaccine C', type: 'Vaccine ngừa bệnh', dosage: '3 liều', status: 'Sẵn có' },
-        { id: 4, name: 'Vaccine D', type: 'Vaccine phòng ngừa', dosage: '2 liều', status: 'Sẵn có' },
-        { id: 5, name: 'Vaccine E', type: 'Vaccine điều trị', dosage: '1 liều', status: 'Hết hàng' },
-        { id: 6, name: 'Vaccine F', type: 'Vaccine ngừa bệnh', dosage: '2 liều', status: 'Sẵn có' },
-        { id: 7, name: 'Vaccine G', type: 'Vaccine phòng ngừa', dosage: '3 liều', status: 'Sẵn có' },
-        { id: 8, name: 'Vaccine H', type: 'Vaccine điều trị', dosage: '1 liều', status: 'Hết hàng' },
-        { id: 9, name: 'Vaccine I', type: 'Vaccine ngừa bệnh', dosage: '2 liều', status: 'Sẵn có' },
-        { id: 10, name: 'Vaccine J', type: 'Vaccine phòng ngừa', dosage: '2 liều', status: 'Sẵn có' }
+        { id: 1, name: 'Vaccine A', type: 'Preventive Vaccine', dosage: '2 doses', status: 'Available' },
+        { id: 2, name: 'Vaccine B', type: 'Preventive Vaccine', dosage: '1 dose', status: 'Out of stock' },
+        { id: 3, name: 'Vaccine C', type: 'Preventive Vaccine', dosage: '3 doses', status: 'Available' },
+        { id: 4, name: 'Vaccine D', type: 'Preventive Vaccine', dosage: '2 doses', status: 'Available' },
+        { id: 5, name: 'Vaccine E', type: 'Therapeutic Vaccine', dosage: '1 dose', status: 'Out of stock' },
+        { id: 6, name: 'Vaccine F', type: 'Preventive Vaccine', dosage: '2 doses', status: 'Available' },
+        { id: 7, name: 'Vaccine G', type: 'Preventive Vaccine', dosage: '3 doses', status: 'Available' },
+        { id: 8, name: 'Vaccine H', type: 'Therapeutic Vaccine', dosage: '1 dose', status: 'Out of stock' },
+        { id: 9, name: 'Vaccine I', type: 'Preventive Vaccine', dosage: '2 doses', status: 'Available' },
+        { id: 10, name: 'Vaccine J', type: 'Preventive Vaccine', dosage: '2 doses', status: 'Available' }
     ]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
@@ -52,7 +52,7 @@ const Vaccine = () => {
     return (
         <div className="admin">
             <div className="admin-vaccine-container">
-                <h1 className="admin-vaccine-title">Danh sách vaccine</h1>
+                <h1 className="admin-vaccine-title">Vaccine List</h1>
                 <div className="admin-vaccine-top-bar">
                     <select value={sortOption} onChange={handleSortChange} className="admin-vaccine-sort-dropdown">
                         <option value="name">Sort by Name</option>
@@ -65,10 +65,10 @@ const Vaccine = () => {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên vaccine</th>
-                                <th>Loại</th>
-                                <th>Liều lượng</th>
-                                <th>Trạng thái</th>
+                                <th>Vaccine Name</th>
+                                <th>Type</th>
+                                <th>Dosage</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
