@@ -14,3 +14,10 @@
     padding-left: 13px;
     width: 70%;
 }
+span.BillPagesend {
+    color: white;
+}
+
+li.active.list-group-item {
+    background-color: var(--primary-colorVaccine);
+}

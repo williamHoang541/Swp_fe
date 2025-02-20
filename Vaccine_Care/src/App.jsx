@@ -21,7 +21,8 @@ import Dashboard from "./components/admin/dashboard/Dashboard";
 import Staff from "./components/admin/staff/Staff";
 import Acc_Info from "./components/admin/profile/acc_info";
 import { PATH_NAME } from "./constant/pathname";
-import Layout from "./Layout/Layout_Staff/Layout";
+import Layout_Staff from "./Layout/Layout_Staff/Layout";
+import Layout_Doctor from "./Layout/Layout_Doctor/Layout";
 import Injection from "./pages/staff/staff1/Injection_infor/Injection";
 import Vaccinestaff from "./pages/staff/staff1/Vaccine/Vaccine";
 import Vaccine from "./components/admin/vaccine/Vaccine";
@@ -43,6 +44,12 @@ const App = () => {
       <Route path="/aboutus" element={<MainLayout><AboutPage /></MainLayout>} />
       <Route path="/priceVaccine" element={<MainLayout><VaccinePrice /></MainLayout>} />
       <Route path={PATH_NAME.CAMNANG} element={<MainLayout><CamNangPage /></MainLayout>} />
+      <Route path={PATH_NAME.BILLPAYMENT} element={<MainLayout><CusPaymentPage /></MainLayout>} />
+      <Route path="/transaction" element={<MainLayout><VaccineTransactionPage /></MainLayout>} />
+      <Route path="/vaccinationScheduleStatus" element={<MainLayout><VaccinationScheduleStatus /></MainLayout>} />
+
+
+
       {/* Admin */}
       <Route path="/admin" element={<AdminDashboard />}>
           <Route path="dashboard" element={<Dashboard />} />
@@ -51,9 +58,14 @@ const App = () => {
           <Route path="payment-history" element={<PaymentHistory />} />
       </Route>
            {/*staff*/}
-        <Route element={<Layout />}>
-          <Route path={PATH_NAME.INJECTION_INFOR} element={<Injection />} />
+        <Route element={<Layout_Staff />}>
+          <Route path={PATH_NAME.INJECTION} element={<Injection />} />
           <Route path={PATH_NAME.VACCINE} element={<Vaccinestaff />} />
+        </Route>
+
+        {/* doctor */}
+        <Route element={<Layout_Doctor />}>
+          <Route path={PATH_NAME.INJECTION_INFORMATION} element={<Inject_infor />} />
         </Route>
       
       {/* Routes không có Header & Footer */}

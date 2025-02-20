@@ -12,7 +12,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     background: white;
-    max-width: 400px;
+    width: 400px;
   }
 
   .completed_icon_container {

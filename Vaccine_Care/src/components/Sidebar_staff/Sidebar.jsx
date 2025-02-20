@@ -13,9 +13,9 @@ const Sidebar = ({ isCollapsed }) => {
     <aside className={`sidebar_staff ${isCollapsed ? "collapsed" : ""}`}>
       <div className="sidebar_main_staff">
         <ul className="sidebar_menu_container_staff">
-          <li className={location.pathname === PATH_NAME.INJECTION_INFOR ? "active" : ""}>
+          <li className={location.pathname === PATH_NAME.INJECTION ? "active" : ""}>
             <NavLink
-              to={PATH_NAME.INJECTION_INFOR}
+              to={PATH_NAME.INJECTION}
               
             >
               <BiInjection className="icon" /> {!isCollapsed && "Thông tin đăng ký tiêm"}

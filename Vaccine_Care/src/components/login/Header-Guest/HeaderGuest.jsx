@@ -98,7 +98,33 @@ const HeaderGuest = () => {
                   <li><a className="dropdown-item" href="#">🔔 Xem tất cả</a></li>
                 </ul>
               </div>
-              <i className="bi bi-box-arrow-in-right header-logout-icon" onClick={handleLogout}></i>
+              <div className="dropdown">
+  <i
+    className="bi bi-gear-fill header-settings-icon header-logout-icon"
+    id="settingsDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    style={{ fontSize: "24px", cursor: "pointer" }}
+  ></i>
+  <ul className="dropdown-menu" aria-labelledby="settingsDropdown">
+     <div className="kfadsjlkfsajdlfsd">
+    <i className="bi bi-person-heart "></i>
+    <li><a className="dropdown-item" href="#">Tài khoản</a></li>
+    </div>
+    <div className="kfadsjlkfsajdlfsd">
+    <i className="bi bi-cash-stack " ></i>
+    <li><a className="dropdown-item" href="/transaction">Giao dịch</a></li>
+    </div>
+    <div className="kfadsjlkfsajdlfsd">
+    <i className="bi bi-calendar-event " ></i>
+    <li><a className="dropdown-item" href="/vaccinationScheduleStatus">Lịch hẹn</a></li>
+    </div>
+    <div className="kfadsjlkfsajdlfsd">
+    <i className="bi bi-box-arrow-in-right " onClick={handleLogout}></i>
+    <li><a className="dropdown-item"onClick={handleLogout} >Đăng xuất</a></li>
+    </div>
+  </ul>
+              </div>
             </div>
           ) : (
             <>
